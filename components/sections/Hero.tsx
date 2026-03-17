@@ -9,13 +9,64 @@ export default function Hero() {
   return (
     <section className="px-8 py-20 bg-[#FCF6EC]">
 
-      {/* Barres decoratives — reprodueixen el símbol del logo */}
+      {/* Símbol animat del logo */}
       <AnimacioEntrada>
-        <div className="flex items-end gap-1.5 mb-5">
-          <div className="w-3.5 h-7 bg-[#63B5F1] rounded-t" />
-          <div className="w-3.5 h-11 bg-[#7A42E1] rounded-t" />
-          <div className="w-3.5 h-16 bg-[#FFBD59] rounded-t" />
-        </div>
+        <svg
+          width="80"
+          height="140"
+          viewBox="-1 0 80 140"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="mb-6"
+        >
+          <style>{`
+            @keyframes pujaDeBaix {
+              from { transform: translateY(50px); opacity: 0; }
+              to   { transform: translateY(0);   opacity: 1; }
+            }
+            @keyframes vinDEsquerra {
+              from { transform: translateX(-50px); opacity: 0; }
+              to   { transform: translateX(0);     opacity: 1; }
+            }
+            @keyframes vinDeDreta {
+              from { transform: translateX(50px); opacity: 0; }
+              to   { transform: translateX(0);    opacity: 1; }
+            }
+            @keyframes creixDeBaix {
+              from { transform: scaleY(0); opacity: 0; }
+              to   { transform: scaleY(1); opacity: 1; }
+            }
+          `}</style>
+
+          {/* Barra blava: Proporció exacta de 3.85cm + 0.2cm gap + 0.8cm chevron */}
+          <g style={{ animation: "pujaDeBaix 1s cubic-bezier(0.34,1.56,0.64,1) 0.1s both" }}>
+            {/* Chevron de 12px d'alçada. Punts recalculats per mantenir el gruix fi amb la nova alçada */}
+            <polygon 
+              points="8,70 16,82 12,82 8,76 4,82 0,82" 
+              fill="#63B5F1" 
+            />
+            {/* Barra blava allargada a 55px (equivalent als teus 3.85cm), amb el gap exacte de 3px */}
+            <rect x="0" y="85" width="16" height="55" fill="#63B5F1" />
+          </g>
+
+          {/* Barra morada: Proporció exacta de 5.15cm (74px) */}
+          <rect
+            x="24" y="66" width="16" height="74"
+            fill="#7A42E1"
+            style={{
+              transformOrigin: "32px 140px",
+              animation: "creixDeBaix 1s cubic-bezier(0.34,1.56,0.64,1) 0.25s both",
+            }}
+          />
+
+          {/* Barra ambre: Proporció exacta de 6.55cm (94px) */}
+          <rect
+            x="48" y="46" width="16" height="94"
+            fill="#FFBD59"
+            style={{ animation: "vinDeDreta 1s cubic-bezier(0.34,1.56,0.64,1) 0.4s both" }}
+          />
+
+        </svg>
       </AnimacioEntrada>
 
       {/* Pill de categoria */}
