@@ -1,4 +1,6 @@
 // Secció "Què fem": cards amb els serveis principals de l'associació
+import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
+
 export default function QuesFem() {
   // Llista de serveis: afegir o modificar aquí per actualitzar les cards
   const serveis = [
@@ -50,34 +52,32 @@ export default function QuesFem() {
   return (
     <section id="que-fem" className="px-8 py-16 border-t-[1.5px] border-[#2E1707] bg-[#FCF6EC]">
 
-      {/* Capçalera de secció */}
+    <AnimacioEntrada>
       <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#2E1707] mb-2">
         Què fem
       </p>
-      <h2 className="text-[38px] font-extrabold tracking-tight text-[#2E1707] mb-3">
+      <h2 className="text-[38px] font-extrabold tracking-tight text-[#2E1707] mb-2">
         Tot el que necessites<br />per destacar
       </h2>
       <p className="text-[16px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
         Formació pràctica per a estudiants de tots els graus de la URV que volen fer el salt al món professional amb avantatge.
       </p>
+    </AnimacioEntrada>
 
-      {/* Grid de serveis */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {serveis.map((s) => (
-          <div key={s.titol} className="border-[1.5px] border-[#2E1707]/20 rounded-xl p-5">
-
-            {/* Icona */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {serveis.map((s, i) => (
+        <AnimacioEntrada key={s.titol} retard={i * 100}>
+          <div className="border-[1.5px] border-[#2E1707]/20 rounded-xl p-5 h-full">
             <div className={`w-9 h-9 rounded-lg flex items-center justify-center mb-3 ${s.iconBg}`}>
               {s.icon}
             </div>
-
             <h3 className="text-[14px] font-bold text-[#2E1707] mb-1">{s.titol}</h3>
             <p className="text-[12px] text-[#2E1707] opacity-60 leading-relaxed">{s.descripcio}</p>
-
           </div>
-        ))}
-      </div>
+        </AnimacioEntrada>
+      ))}
+    </div>
 
-    </section>
-  );
+  </section>
+);
 }

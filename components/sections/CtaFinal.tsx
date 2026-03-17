@@ -1,18 +1,22 @@
 import Link from "next/link";
+import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 
 // Secció CTA final: crida a l'acció principal abans del footer
 export default function CtaFinal() {
   return (
     <section id="uneix-te" className="px-8 py-20 bg-[#2E1707] text-center">
 
-      <h2 className="text-[40px] font-extrabold tracking-tight text-[#FCF6EC] mb-4">
-        Vols anar un pas per davant?
-      </h2>
-      <p className="text-[16px] text-[#FCF6EC] opacity-50 mb-10">
-        Uneix-te a UpSkill i comença a construir el teu futur professional des d'ara.
-      </p>
+      <AnimacioEntrada>
+        <h2 className="text-[40px] font-extrabold tracking-tight text-[#FCF6EC] mb-4">
+          Vols anar un pas per davant?
+        </h2>
+        <p className="text-[16px] text-[#FCF6EC] opacity-50 mb-10">
+          Uneix-te a UpSkill i comença a construir el teu futur professional des d'ara.
+        </p>
+      </AnimacioEntrada>
 
       {/* Botons CTA */}
+      <AnimacioEntrada retard={150}>
       <div className="flex gap-3 justify-center flex-wrap">
         <Link
           href="https://lnkd.in/eGJrXYYZ"
@@ -31,6 +35,7 @@ export default function CtaFinal() {
           Instagram @upskill.careerlab
         </Link>
       </div>
+      </AnimacioEntrada>
 
     </section>
   );
