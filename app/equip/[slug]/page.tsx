@@ -1,124 +1,72 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getMembre, membres } from "@/lib/equip";
 import { notFound } from "next/navigation";
+import { getMembre, membres } from "@/lib/equip";
 
-
-// Metadata dinàmica: cada perfil té el seu propi títol i descripció per a SEO i OG tags
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const membre = getMembre(slug);
-
-  if (!membre) return {};
-
-  return {
-    title: `${membre.nom} ${membre.cognom}`,
-    description: membre.bio || `${membre.nom} ${membre.cognom}, ${membre.rol} a UpSkill — Students' Career LAB`,
-    openGraph: {
-      title: `${membre.nom} ${membre.cognom} | UpSkill`,
-      description: membre.bio || `${membre.nom} ${membre.cognom}, ${membre.rol} a UpSkill`,
-      images: [{ url: membre.foto, width: 400, height: 400 }],
-    },
-  };
+interface EquipMembrePageProps {
+  params: Promise<{ slug: string }>;
 }
 
-
-// Generem les rutes estàtiques per a cada membre
 export function generateStaticParams() {
-  return membres.map((m) => ({ slug: m.slug }));
+  return membres.map((membre) => ({ slug: membre.slug }));
 }
 
-export default async function PaginaMembre({ params }: { params: Promise<{ slug: string }> }) {
+export default async function EquipMembrePage({ params }: EquipMembrePageProps) {
   const { slug } = await params;
   const membre = getMembre(slug);
 
-  // Si el slug no existeix, mostrem 404
-  if (!membre) notFound();
+  if (!membre) {
+    notFound();
+  }
 
   return (
-    <main className="min-h-screen bg-us-cream px-8 py-16 max-w-2xl mx-auto">
+    <main className="bg-us-cream min-h-[calc(100vh-90px)] px-8 py-14">
+      <div className="mx-auto w-full max-w-4xl">
+        <Link
+          href="/#equip"
+          className="inline-flex items-center text-[13px] font-semibold text-us-dark opacity-75 hover:opacity-100 transition-opacity"
+        >
+          ← Tornar a l'equip
+        </Link>
 
-      {/* Botó de tornar */}
-      <Link
-        href="/#equip"
-        className="inline-flex items-center gap-2 text-[13px] text-us-dark opacity-50 hover:opacity-100 transition-opacity mb-12"
-      >
-        ← Tornar a l'equip
-      </Link>
+        <article className="mt-6 rounded-2xl border-[1.5px] border-us-dark/15 bg-white p-8 md:p-10">
+          <div className="flex flex-col md:flex-row md:items-start gap-8">
+            <div className="w-44 h-44 rounded-2xl overflow-hidden border-[1.5px] border-us-dark/10 shrink-0">
+              <Image
+                src={membre.foto}
+                alt={`${membre.nom} ${membre.cognom}`}
+                width={176}
+                height={176}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
 
-      {/* Capçalera del perfil */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 mb-12">
+            <div className="flex-1">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-us-dark/45 font-semibold">Membre de l'equip</p>
+              <h1 className="text-[34px] md:text-[42px] leading-tight font-extrabold text-us-dark mt-2">
+                {membre.nom} {membre.cognom}
+              </h1>
+              <p className="text-[15px] font-semibold text-us-purple mt-2">{membre.rol}</p>
 
-        <div className="w-36 h-36 rounded-full overflow-hidden border-[1.5px] border-us-dark/10 shrink-0">
-          <Image
-            src={membre.foto}
-            alt={`${membre.nom} ${membre.cognom}`}
-            width={144}
-            height={144}
-            className="object-cover w-full h-full"
-          />
-        </div>
+              <div className="mt-6 space-y-2 text-[15px] text-us-dark/85">
+                <p>
+                  <span className="font-semibold text-us-dark">Estudis:</span> {membre.estudis}
+                </p>
+                <p>
+                  <span className="font-semibold text-us-dark">Universitat:</span> {membre.universitat}
+                </p>
+              </div>
 
-        <div className="text-center sm:text-left">
-          <p className="text-[11px] font-semibold tracking-widest uppercase opacity-40 text-us-dark mb-1">
-            {membre.rol}
-          </p>
-          <h1 className="text-[40px] font-extrabold tracking-tight text-us-dark leading-tight mb-1">
-            {membre.nom} {membre.cognom}
-          </h1>
-          <p className="text-[15px] text-us-dark opacity-55">
-            {membre.estudis} · {membre.universitat}
-          </p>
-        </div>
-
+              <p className="mt-6 text-[16px] leading-relaxed text-us-dark/80">
+                {membre.bio?.trim()
+                  ? membre.bio
+                  : "Estem acabant de preparar aquest perfil. Ben aviat hi trobaràs més informació personal i professional."}
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
-
-      {/* Bio */}
-      <div className="border-t-[1.5px] border-us-dark/10 pt-10 mb-10">
-        {membre.bio ? (
-          <p className="text-[16px] text-us-dark leading-relaxed opacity-75">
-            {membre.bio}
-          </p>
-        ) : (
-          // TODO: substituir quan la bio estigui disponible
-          <p className="text-[15px] text-us-dark opacity-30 italic">
-            Biografia pròximament.
-          </p>
-        )}
-      </div>
-
-      {/* Links de contacte: només es mostren si estan omplerts */}
-      <div className="flex flex-wrap gap-3">
-        {membre.linkedin && (
-          <Link
-            href={membre.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-us-dark text-us-cream text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity"
-          >
-            LinkedIn
-          </Link>
-        )}
-        {membre.instagram && (
-          <Link
-            href={membre.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-[1.5px] border-us-dark text-us-dark text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors"
-          >
-            Instagram
-          </Link>
-        )}
-        {membre.email && (
-          <Link
-            href={`mailto:${membre.email}`}
-            className="border-[1.5px] border-us-dark text-us-dark text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors"
-          >
-            Email
-          </Link>
-        )}
-      </div>
-
     </main>
   );
 }

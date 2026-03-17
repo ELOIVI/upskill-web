@@ -3,12 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
+
 
 // Navbar: component de client per gestionar l'estat del menú mòbil i la secció activa
 // Estructura: logo | links (escriptori) | botó CTA (escriptori) | hamburguesa (mòbil)
 export default function Navbar() {
   const [menuObert, setMenuObert] = useState(false);
   const [seccioActiva, setSeccioActiva] = useState("");
+  const router = useRouter();
 
   const links = [
     { href: "#qui-som", label: "Qui som" },
@@ -17,44 +20,58 @@ export default function Navbar() {
     { href: "#esdeveniments", label: "Esdeveniments" },
   ];
 
-  // Detecta quina secció és visible i actualitza la URL sense recarregar
+  const pathname = usePathname();
+  // Detecta quina secció és visible: només s'executa a la home
   useEffect(() => {
-    const ids = links.map((l) => l.href.replace("#", ""));
+  if (pathname !== "/") return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            setSeccioActiva(`#${id}`);
-            
-          }
-        });
-      },
-      {
-        // La secció s'activa quan ocupa almenys el 30% de la pantalla
-        threshold: 0.3,
-      }
-    );
+  const ids = links.map((l) => l.href.replace("#", ""));
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setSeccioActiva(`#${entry.target.id}`);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+    // Delay per assegurar que el DOM està llest després de navegar
+  const timeout = setTimeout(() => {
     ids.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
+  }, 100);
 
-    return () => observer.disconnect();
-  }, []);
+  return () => {
+    clearTimeout(timeout);
+    observer.disconnect();
+  };
+}, [pathname]);
 
   // Funció per fer scroll suau a una secció
-  // Necessària perquè els links de hash no es recarreguen si ja hi ets
+  // Si la secció no existeix a la pàgina actual, navega a la home primer
   const scrollASeccio = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     const id = href.replace("#", "");
+    setMenuObert(false);
+
+    // Si la secció existeix a la pàgina actual, fem scroll directament
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setMenuObert(false);
+      return;
     }
+
+    // Si no existeix (estem a una subpàgina), naveguem a la home i fem scroll
+    router.push("/");
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 300);
   };
 
   return (
@@ -83,7 +100,7 @@ export default function Navbar() {
               className={`transition-opacity cursor-pointer ${
                 seccioActiva === link.href
                   ? "text-us-purple opacity-100 font-bold"
-                  : "text-us-dark opacity-65 hover:opacity-100"
+                  : "text-us-dark opacity-65 hover:opacity-100 "
               }`}
             >
               {link.label}
