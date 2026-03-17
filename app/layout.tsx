@@ -14,9 +14,9 @@ const jakarta = Plus_Jakarta_Sans({
 // Metadata global: s'aplica a totes les pàgines
 // Les pàgines individuals poden sobreescriure camps concrets
 export const metadata: Metadata = {
+  metadataBase: new URL("https://upskill.cat"), // TODO: canviar pel domini real
   title: {
     default: "UpSkill — Students' Career LAB",
-    // Pàgines internes: "Grecia o Lucia | UpSkill"
     template: "%s | UpSkill",
   },
   description: "La comunitat que impulsa la teva carrera professional des de la universitat. Networking, LinkedIn, pràctiques i molt més.",
