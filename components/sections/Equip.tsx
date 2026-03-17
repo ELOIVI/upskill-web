@@ -1,22 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
+import { membres } from "@/lib/equip";
 
 // Secció "Equip": membres actuals de l'associació
-// Afegir nous membres a l'array quan l'equip creixi
+// Les dades es gestionen a lib/equip.ts
 export default function Equip() {
-  const membres = [
-    {
-      nom: "Grecia Martínez",
-      rol: "Co-fundadora",
-      foto: "/images/team/grecia_foto.jpg",
-    },
-    {
-      nom: "Lucia Guerrero",
-      rol: "Co-fundadora",
-      foto: "/images/team/lucia_foto.jpg",
-    },
-  ];
-
   return (
     <section id="equip" className="px-8 py-16 border-t-[1.5px] border-[#2E1707] bg-[#FCF6EC]">
 
@@ -33,26 +22,36 @@ export default function Equip() {
         </p>
       </AnimacioEntrada>
 
-      {/* Grid de membres: centrat amb flex quan hi ha pocs membres */}
+      {/* Grid de membres */}
       <div className="flex flex-wrap justify-center gap-6">
         {membres.map((m, i) => (
-          <AnimacioEntrada key={m.nom} retard={i * 100}>
-          <div className="border-[1.5px] border-[#2E1707]/25 rounded-xl p-8 text-center w-56 bg-white/80">
-              {/* Foto de perfil circular */}
-              <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-[1.5px] border-[#2E1707]/10">
-                <Image
-                  src={m.foto}
-                  alt={m.nom}
-                  width={112}
-                  height={112}
-                  className="object-cover w-full h-full"
-                />
+          <AnimacioEntrada key={m.slug} retard={i * 100}>
+
+            {/* Card: clicable cap al perfil individual */}
+            <Link href={`/equip/${m.slug}`}>
+              <div className="border-[1.5px] border-[#2E1707]/25 rounded-xl p-8 text-center w-56 bg-white/80 hover:border-[#7A42E1] hover:shadow-sm transition-all duration-300 cursor-pointer">
+
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-[1.5px] border-[#2E1707]/10">
+                  <Image
+                    src={m.foto}
+                    alt={`${m.nom} ${m.cognom}`}
+                    width={112}
+                    height={112}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+
+                <h4 className="text-[15px] font-bold text-[#2E1707] mb-1">{m.nom} {m.cognom}</h4>
+                <p className="text-[13px] text-[#2E1707] opacity-50 mb-3">{m.rol}</p>
+
+                {/* Indicador visual que la card és clicable */}
+                <span className="text-[11px] text-[#7A42E1] font-semibold opacity-70">
+                  Veure perfil →
+                </span>
+
               </div>
+            </Link>
 
-              <h4 className="text-[15px] font-bold text-[#2E1707] mb-1">{m.nom}</h4>
-              <p className="text-[13px] text-[#2E1707] opacity-50">{m.rol}</p>
-
-            </div>
           </AnimacioEntrada>
         ))}
       </div>
