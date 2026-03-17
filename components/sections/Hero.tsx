@@ -79,8 +79,8 @@ export default function Hero() {
       {/* Títol principal */}
       <AnimacioEntrada retard={200}>
         <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-us-dark max-w-3xl mb-5">
-          Estudiants que volen{" "}
-          <em className="not-italic text-us-purple">més</em>
+          Students who want{" "}
+          <em className="not-italic text-us-purple">more</em>
         </h1>
       </AnimacioEntrada>
 
