@@ -42,8 +42,7 @@ export default function Hero() {
 
       {/* Botons CTA */}
       <AnimacioEntrada retard={400}>
-        <div className="flex gap-3 flex-wrap">
-          <Link
+        <div className="flex gap-3 flex-wrap justify-center sm:justify-start">          <Link
             href="#uneix-te"
             className="bg-[#2E1707] text-[#FCF6EC] text-[14px] font-semibold px-8 py-3 rounded-full hover:opacity-80 transition-opacity"
           >
