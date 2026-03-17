@@ -18,7 +18,7 @@ export default function Esdeveniments() {
   ];
 
   return (
-    <section id="esdeveniments" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream">
+    <section id="esdeveniments" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream scroll-mt-20">
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>

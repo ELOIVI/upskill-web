@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <QueFem />
       <QuiSom />
+      <QueFem />
       <Equip />
       <Esdeveniments />
       <CtaFinal />

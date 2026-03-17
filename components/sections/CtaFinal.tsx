@@ -4,7 +4,7 @@ import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 // Secció CTA final: crida a l'acció principal abans del footer
 export default function CtaFinal() {
   return (
-    <section id="uneix-te" className="px-8 py-20 bg-us-dark text-center">
+    <section id="uneix-te" className="px-8 py-20 bg-us-dark text-center scroll-mt-20">
 
       <AnimacioEntrada>
         <h2 className="text-[40px] font-extrabold tracking-tight text-us-cream mb-4">

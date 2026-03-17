@@ -12,7 +12,7 @@ export default function QuiSom() {
   ];
 
   return (
-    <section id="qui-som" className="px-8 py-16 bg-us-dark">
+    <section id="qui-som" className="px-8 py-16 bg-us-dark scroll-mt-20">
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
