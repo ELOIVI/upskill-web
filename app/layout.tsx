@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: "La comunitat que impulsa la teva carrera professional des de la universitat.",
     images: [
       {
-        url: "/images/brand/og-image.png", // TODO: crear imatge OG de 1200x630px
+        url: "/images/brand/og_image.png", // TODO: crear imatge OG de 1200x630px
         width: 1200,
         height: 630,
         alt: "UpSkill — Students' Career LAB",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "UpSkill — Students' Career LAB",
     description: "La comunitat que impulsa la teva carrera professional des de la universitat.",
-    images: ["/images/brand/og-image.png"], // TODO: mateix que OG
+    images: ["/images/brand/og_image.png"], // TODO: mateix que OG
   },
 
   // Icona de la pestanya
