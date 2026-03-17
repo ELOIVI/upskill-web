@@ -3,6 +3,26 @@ import Link from "next/link";
 import { getMembre, membres } from "@/lib/equip";
 import { notFound } from "next/navigation";
 
+
+// Metadata dinàmica: cada perfil té el seu propi títol i descripció per a SEO i OG tags
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const membre = getMembre(slug);
+
+  if (!membre) return {};
+
+  return {
+    title: `${membre.nom} ${membre.cognom}`,
+    description: membre.bio || `${membre.nom} ${membre.cognom}, ${membre.rol} a UpSkill — Students' Career LAB`,
+    openGraph: {
+      title: `${membre.nom} ${membre.cognom} | UpSkill`,
+      description: membre.bio || `${membre.nom} ${membre.cognom}, ${membre.rol} a UpSkill`,
+      images: [{ url: membre.foto, width: 400, height: 400 }],
+    },
+  };
+}
+
+
 // Generem les rutes estàtiques per a cada membre
 export function generateStaticParams() {
   return membres.map((m) => ({ slug: m.slug }));
@@ -12,7 +32,6 @@ export default async function PaginaMembre({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const membre = getMembre(slug);
 
-  if (!membre) notFound();
   // Si el slug no existeix, mostrem 404
   if (!membre) notFound();
 

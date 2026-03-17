@@ -27,8 +27,7 @@ export default function Navbar() {
           if (entry.isIntersecting) {
             const id = entry.target.id;
             setSeccioActiva(`#${id}`);
-            // Actualitza la URL sense recarregar la pàgina
-            window.history.replaceState(null, "", `#${id}`);
+            
           }
         });
       },
