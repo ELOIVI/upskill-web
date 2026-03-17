@@ -1,0 +1,7 @@
+services:
+  upskill-web:
+    build: .
+    container_name: upskill-web
+    ports:
+      - "3001:80"
+    restart: unless-stopped
