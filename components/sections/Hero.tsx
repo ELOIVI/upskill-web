@@ -7,17 +7,17 @@ import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 // Conté: barres decoratives de marca, títol principal, subtítol i botons CTA
 export default function Hero() {
   return (
-    <section className="px-8 py-20 bg-[#FCF6EC]">
+    <section className="px-8 pt-5 pb-16 bg-us-cream">
 
       {/* Símbol animat del logo */}
       <AnimacioEntrada>
         <svg
           width="80"
           height="140"
-          viewBox="-1 0 80 140"
+          viewBox="-1 65 80 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="mb-6"
+          className="mb-0"
         >
           <style>{`
             @keyframes pujaDeBaix {
@@ -71,22 +71,22 @@ export default function Hero() {
 
       {/* Pill de categoria */}
       <AnimacioEntrada retard={100}>
-        <span className="inline-block bg-[#2E1707] text-[#FCF6EC] text-[11px] font-semibold px-4 py-1 rounded-full uppercase tracking-widest mb-5">
+        <span className="inline-block bg-us-dark text-us-cream text-[11px] font-semibold px-4 py-1 rounded-full uppercase tracking-widest mb-5">
           Students' Career LAB · URV
         </span>
       </AnimacioEntrada>
 
       {/* Títol principal */}
       <AnimacioEntrada retard={200}>
-        <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#2E1707] max-w-3xl mb-5">
+        <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-us-dark max-w-3xl mb-5">
           Estudiants que volen{" "}
-          <em className="not-italic text-[#7A42E1]">més</em>
+          <em className="not-italic text-us-purple">més</em>
         </h1>
       </AnimacioEntrada>
 
       {/* Subtítol */}
       <AnimacioEntrada retard={300}>
-        <p className="text-[18px] text-[#5a3520] max-w-lg leading-relaxed mb-10">
+        <p className="text-[18px] text-us-muted max-w-lg leading-relaxed mb-10">
           La comunitat que impulsa la teva carrera professional des de la universitat. Networking, LinkedIn, pràctiques i molt més.
         </p>
       </AnimacioEntrada>
@@ -95,13 +95,13 @@ export default function Hero() {
       <AnimacioEntrada retard={400}>
         <div className="flex gap-3 flex-wrap justify-center sm:justify-start">          <Link
             href="#uneix-te"
-            className="bg-[#2E1707] text-[#FCF6EC] text-[14px] font-semibold px-8 py-3 rounded-full hover:opacity-80 transition-opacity"
+            className="bg-us-dark text-us-cream text-[14px] font-semibold px-8 py-3 rounded-full hover:opacity-80 transition-opacity"
           >
             Uneix-te a UpSkill
           </Link>
           <Link
             href="#qui-som"
-            className="border-[1.5px] border-[#2E1707] text-[#2E1707] text-[14px] font-semibold px-8 py-3 rounded-full hover:bg-[#2E1707] hover:text-[#FCF6EC] transition-colors"
+            className="border-[1.5px] border-us-dark text-us-dark text-[14px] font-semibold px-8 py-3 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors"
           >
             Saber-ne més
           </Link>

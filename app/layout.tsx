@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ca" suppressHydrationWarning>
-      <body className={`${jakarta.variable} font-[family-name:var(--font-jakarta)] antialiased bg-[#FCF6EC]`}>
+      <body className={`${jakarta.variable} font-[family-name:var(--font-jakarta)] antialiased bg-us-cream`}>
         <Navbar />
         <Banner />
         {children}

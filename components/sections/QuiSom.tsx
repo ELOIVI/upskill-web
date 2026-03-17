@@ -12,17 +12,17 @@ export default function QuiSom() {
   ];
 
   return (
-    <section id="qui-som" className="px-8 py-16 bg-[#2E1707]">
+    <section id="qui-som" className="px-8 py-16 bg-us-dark">
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#FCF6EC] mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-cream mb-2">
           Qui som
         </p>
-        <h2 className="text-[38px] font-extrabold tracking-tight text-[#FCF6EC] leading-tight mb-5 max-w-md">
+        <h2 className="text-[38px] font-extrabold tracking-tight text-us-cream leading-tight mb-5 max-w-md">
           Vam néixer per omplir el buit que la universitat no cobreix
         </h2>
-        <p className="text-[16px] text-[#FCF6EC] opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-cream opacity-55 max-w-lg leading-relaxed mb-10">
           UpSkill és una associació d'estudiants de la URV creada per i per a estudiants amb iniciativa. Un espai per compartir experiències, recursos i oportunitats, i construir comunitat.
         </p>
       </AnimacioEntrada>
@@ -31,8 +31,8 @@ export default function QuiSom() {
       <div className="flex flex-col gap-4 mb-12">
         {preguntes.map((p, i) => (
           <AnimacioEntrada key={p} retard={i * 100}>
-            <div className="border-l-[3px] border-[#7A42E1] pl-5">
-              <p className="text-[15px] text-[#FCF6EC] opacity-75 leading-relaxed font-medium">{p}</p>
+            <div className="border-l-[3px] border-us-purple pl-5">
+              <p className="text-[15px] text-us-cream opacity-75 leading-relaxed font-medium">{p}</p>
             </div>
           </AnimacioEntrada>
         ))}
@@ -42,16 +42,16 @@ export default function QuiSom() {
       <AnimacioEntrada retard={400}>
         <div className="grid grid-cols-3 gap-4 max-w-xs">
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-[#FFBD59] leading-none mb-1">URV</p>
-            <p className="text-[11px] text-[#FCF6EC] opacity-45">Universitat</p>
+            <p className="text-[36px] font-extrabold text-us-amber leading-none mb-1">URV</p>
+            <p className="text-[11px] text-us-cream opacity-45">Universitat</p>
           </div>
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-[#63B5F1] leading-none mb-1">0€</p>
-            <p className="text-[11px] text-[#FCF6EC] opacity-45">Per unir-te</p>
+            <p className="text-[36px] font-extrabold text-us-blue leading-none mb-1">0€</p>
+            <p className="text-[11px] text-us-cream opacity-45">Per unir-te</p>
           </div>
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-[#7A42E1] leading-none mb-1">Tots</p>
-            <p className="text-[11px] text-[#FCF6EC] opacity-45">Els graus</p>
+            <p className="text-[36px] font-extrabold text-us-purple leading-none mb-1">Tots</p>
+            <p className="text-[11px] text-us-cream opacity-45">Els graus</p>
           </div>
         </div>
       </AnimacioEntrada>

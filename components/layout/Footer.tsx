@@ -3,9 +3,9 @@ import Link from "next/link";
 // Footer:peu de pàgina amb links i crèdits
 export default function Footer() {
   return (
-    <footer className="px-8 py-5 border-t-[1.5px] border-[#2E1707] bg-[#FCF6EC] flex items-center justify-between flex-wrap gap-4">
+    <footer className="px-8 py-5 border-t-[1.5px] border-us-dark bg-us-cream flex items-center justify-between flex-wrap gap-4">
 
-      <p className="text-[11px] text-[#2E1707] opacity-40">
+      <p className="text-[11px] text-us-dark opacity-40">
         © 2026 UpSkill — Students' Career LAB · URV (Not Yet jeje)
       </p>
 
@@ -15,7 +15,7 @@ export default function Footer() {
           href="https://www.instagram.com/upskill.careerlab/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[11px] text-[#2E1707] opacity-40 hover:opacity-80 transition-opacity"
+          className="text-[11px] text-us-dark opacity-40 hover:opacity-80 transition-opacity"
         >
           Instagram
         </Link>
@@ -23,7 +23,7 @@ export default function Footer() {
           href="https://www.linkedin.com/company/upskill-career-lab-urv/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[11px] text-[#2E1707] opacity-40 hover:opacity-80 transition-opacity"
+          className="text-[11px] text-us-dark opacity-40 hover:opacity-80 transition-opacity"
         >
           LinkedIn
         </Link>

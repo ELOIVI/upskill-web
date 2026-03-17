@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="bg-[#FCF6EC] border-b-[1.5px] border-[#2E1707]">
+    <header className="bg-us-cream border-b-[1.5px] border-us-dark">
       <nav className="flex items-center justify-between px-8 py-4">
 
         {/* TODO: substituir PNG per SVG quan estigui disponible */}
@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[#2E1707] opacity-65 hover:opacity-100 transition-opacity"
+              className="text-us-dark opacity-65 hover:opacity-100 transition-opacity"
             >
               {link.label}
             </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* CTA: visible només en escriptori */}
         <Link
           href="#uneix-te"
-          className="hidden md:block bg-[#2E1707] text-[#FCF6EC] text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity"
+          className="hidden md:block bg-us-dark text-us-cream text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity"
         >
           Uneix-te
         </Link>
@@ -61,22 +61,22 @@ export default function Navbar() {
           aria-label={menuObert ? "Tancar menú" : "Obrir menú"}
         >
           {/* Les tres línies es transformen en X quan el menú és obert */}
-          <span className={`block w-6 h-[1.5px] bg-[#2E1707] transition-transform duration-300 origin-center ${menuObert ? "translate-y-[6.5px] rotate-45" : ""}`} />
-          <span className={`block w-6 h-[1.5px] bg-[#2E1707] transition-opacity duration-300 ${menuObert ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-[1.5px] bg-[#2E1707] transition-transform duration-300 origin-center ${menuObert ? "-translate-y-[6.5px] -rotate-45" : ""}`} />
+          <span className={`block w-6 h-[1.5px] bg-us-dark transition-transform duration-300 origin-center ${menuObert ? "translate-y-[6.5px] rotate-45" : ""}`} />
+          <span className={`block w-6 h-[1.5px] bg-us-dark transition-opacity duration-300 ${menuObert ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-[1.5px] bg-us-dark transition-transform duration-300 origin-center ${menuObert ? "-translate-y-[6.5px] -rotate-45" : ""}`} />
         </button>
 
       </nav>
 
       {/* Menú mòbil: desplegable sota el Navbar */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuObert ? "max-h-96" : "max-h-0"}`}>
-        <div className="flex flex-col px-8 pb-6 gap-5 border-t-[1.5px] border-[#2E1707] pt-5">
+        <div className="flex flex-col px-8 pb-6 gap-5 border-t-[1.5px] border-us-dark pt-5">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuObert(false)}
-              className="text-[#2E1707] text-[16px] font-semibold opacity-75 hover:opacity-100 transition-opacity"
+              className="text-us-dark text-[16px] font-semibold opacity-75 hover:opacity-100 transition-opacity"
             >
               {link.label}
             </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
           <Link
             href="#uneix-te"
             onClick={() => setMenuObert(false)}
-            className="bg-[#2E1707] text-[#FCF6EC] text-[14px] font-semibold px-5 py-3 rounded-full text-center hover:opacity-80 transition-opacity mt-2"
+            className="bg-us-dark text-us-cream text-[14px] font-semibold px-5 py-3 rounded-full text-center hover:opacity-80 transition-opacity mt-2"
           >
             Uneix-te
           </Link>

@@ -7,17 +7,17 @@ import { membres } from "@/lib/equip";
 // Les dades es gestionen a lib/equip.ts
 export default function Equip() {
   return (
-    <section id="equip" className="px-8 py-16 border-t-[1.5px] border-[#2E1707] bg-[#FCF6EC]">
+    <section id="equip" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream">
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#2E1707] mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-dark mb-2">
           L'equip
         </p>
-        <h2 className="text-[38px] font-extrabold tracking-tight text-[#2E1707] mb-3">
+        <h2 className="text-[38px] font-extrabold tracking-tight text-us-dark mb-3">
           Les persones del darrere
         </h2>
-        <p className="text-[16px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-dark opacity-55 max-w-lg leading-relaxed mb-10">
           Estudiants com tu, amb ganes de fer les coses d'una altra manera.
         </p>
       </AnimacioEntrada>
@@ -29,9 +29,9 @@ export default function Equip() {
 
             {/* Card: clicable cap al perfil individual */}
             <Link href={`/equip/${m.slug}`}>
-              <div className="border-[1.5px] border-[#2E1707]/25 rounded-xl p-8 text-center w-56 bg-white/80 hover:border-[#7A42E1] hover:shadow-sm transition-all duration-300 cursor-pointer">
+              <div className="border-[1.5px] border-us-dark/25 rounded-xl p-8 text-center w-56 bg-white/80 hover:border-us-purple hover:shadow-sm transition-all duration-300 cursor-pointer">
 
-                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-[1.5px] border-[#2E1707]/10">
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-[1.5px] border-us-dark/10">
                   <Image
                     src={m.foto}
                     alt={`${m.nom} ${m.cognom}`}
@@ -41,11 +41,11 @@ export default function Equip() {
                   />
                 </div>
 
-                <h4 className="text-[15px] font-bold text-[#2E1707] mb-1">{m.nom} {m.cognom}</h4>
-                <p className="text-[13px] text-[#2E1707] opacity-50 mb-3">{m.rol}</p>
+                <h4 className="text-[15px] font-bold text-us-dark mb-1">{m.nom} {m.cognom}</h4>
+                <p className="text-[13px] text-us-dark opacity-50 mb-3">{m.rol}</p>
 
                 {/* Indicador visual que la card és clicable */}
-                <span className="text-[11px] text-[#7A42E1] font-semibold opacity-70">
+                <span className="text-[11px] text-us-purple font-semibold opacity-70">
                   Veure perfil →
                 </span>
 

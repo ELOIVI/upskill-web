@@ -45,6 +45,14 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Colors de marca UpSkill */
+  --color-us-dark:   #2E1707;
+  --color-us-cream:  #FCF6EC;
+  --color-us-blue:   #63B5F1;
+  --color-us-purple: #7A42E1;
+  --color-us-amber:  #FFBD59;
+  --color-us-muted:  #5a3520;
 }
 
 :root {
@@ -121,7 +129,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
   html {
     @apply font-sans;
