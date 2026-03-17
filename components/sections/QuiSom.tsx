@@ -16,18 +16,18 @@ export default function QuiSom() {
       <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#FCF6EC] mb-2">
         Qui som
       </p>
-      <h2 className="text-[32px] font-extrabold tracking-tight text-[#FCF6EC] leading-tight mb-4 max-w-md">
+      <h2 className="text-[38px] font-extrabold tracking-tight text-[#FCF6EC] leading-tight mb-5 max-w-md">
         Vam néixer per omplir el buit que la universitat no cobreix
       </h2>
-      <p className="text-[15px] text-[#FCF6EC] opacity-55 max-w-lg leading-relaxed mb-10">
+      <p className="text-[16px] text-[#FCF6EC] opacity-55 max-w-lg leading-relaxed mb-10">
         UpSkill és una associació d'estudiants de la URV creada per i per a estudiants amb iniciativa. Un espai per compartir experiències, recursos i oportunitats, i construir comunitat.
       </p>
 
-      {/* Preguntes retòriques — fil conductor de la marca */}
+      {/* Preguntes retòriques: fil conductor de la marca */}
       <div className="flex flex-col gap-4 mb-12">
         {preguntes.map((p) => (
           <div key={p} className="border-l-[3px] border-[#7A42E1] pl-5">
-            <p className="text-[14px] text-[#FCF6EC] opacity-75 leading-relaxed font-medium">{p}</p>
+            <p className="text-[15px] text-[#FCF6EC] opacity-75 leading-relaxed font-medium">{p}</p>
           </div>
         ))}
       </div>

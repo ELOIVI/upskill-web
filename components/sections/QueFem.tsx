@@ -54,10 +54,10 @@ export default function QuesFem() {
       <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#2E1707] mb-2">
         Què fem
       </p>
-      <h2 className="text-[32px] font-extrabold tracking-tight text-[#2E1707] mb-2">
+      <h2 className="text-[38px] font-extrabold tracking-tight text-[#2E1707] mb-3">
         Tot el que necessites<br />per destacar
       </h2>
-      <p className="text-[15px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
+      <p className="text-[16px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
         Formació pràctica per a estudiants de tots els graus de la URV que volen fer el salt al món professional amb avantatge.
       </p>
 

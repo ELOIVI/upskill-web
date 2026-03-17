@@ -23,16 +23,15 @@ export default function Equip() {
       <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-[#2E1707] mb-2">
         L'equip
       </p>
-      <h2 className="text-[32px] font-extrabold tracking-tight text-[#2E1707] mb-2">
+      <h2 className="text-[38px] font-extrabold tracking-tight text-[#2E1707] mb-3">
         Les persones del darrere
       </h2>
-      <p className="text-[15px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
+      <p className="text-[16px] text-[#2E1707] opacity-55 max-w-lg leading-relaxed mb-10">
         Estudiants com tu, amb ganes de fer les coses d'una altra manera.
       </p>
 
       {/* Grid de membres */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-lg">
-        {membres.map((m) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">        {membres.map((m) => (
           <div key={m.nom} className="border-[1.5px] border-[#2E1707]/15 rounded-xl p-6 text-center">
 
             {/* TODO: substituir inicials per foto quan estigui disponible */}

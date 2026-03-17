@@ -20,13 +20,13 @@ export default function Hero() {
       </span>
 
       {/* Títol principal */}
-      <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] text-[#2E1707] max-w-2xl mb-4">
+      <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-[#2E1707] max-w-3xl mb-5">
         Estudiants que volen{" "}
         <em className="not-italic text-[#7A42E1]">més</em>
       </h1>
 
       {/* Subtítol */}
-      <p className="text-[16px] text-[#5a3520] max-w-lg leading-relaxed mb-8">
+      <p className="text-[18px] text-[#5a3520] max-w-lg leading-relaxed mb-10">
         La comunitat que impulsa la teva carrera professional des de la universitat. Networking, LinkedIn, pràctiques i molt més.
       </p>
 
