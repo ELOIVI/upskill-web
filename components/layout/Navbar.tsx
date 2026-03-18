@@ -28,18 +28,22 @@ export default function Navbar() {
   const ids = links.map((l) => l.href.replace("#", ""));
 
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setSeccioActiva(`#${entry.target.id}`);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setSeccioActiva(`#${entry.target.id}`);
+      }
+    });
+  },
+  {
+    // S'activa quan la secció creua el terç superior de la pantalla
+    rootMargin: "-33% 0px -66% 0px",
+    threshold: 0,
+  }
+);
 
     // Delay per assegurar que el DOM està llest després de navegar
-  const timeout = setTimeout(() => {
+   const timeout = setTimeout(() => {
     ids.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);

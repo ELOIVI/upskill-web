@@ -9,7 +9,7 @@ export interface Membre {
   foto: string;
   estudis: string;
   universitat: string;
-  bio: string; // TODO: omplir quan les noies passin la informació
+  bio?: string; // TODO: omplir quan les noies passin la informació
   linkedin?: string;
   instagram?: string;
   email?: string;
@@ -24,10 +24,6 @@ export const membres: Membre[] = [
     foto: "/images/team/grecia_foto.jpg",
     estudis: "Psicologia",
     universitat: "Universitat Rovira i Virgili",
-    bio: "", // TODO: omplir amb la bio de la Grecia
-    linkedin: "",
-    instagram: "",
-    email: "",
   },
   {
     nom: "Lucia",
@@ -37,10 +33,6 @@ export const membres: Membre[] = [
     foto: "/images/team/lucia_foto.jpg",
     estudis: "Psicologia",
     universitat: "Universitat Rovira i Virgili",
-    bio: "", // TODO: omplir amb la bio de la Lucia
-    linkedin: "",
-    instagram: "",
-    email: "",
   },
 ];
 

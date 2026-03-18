@@ -11,10 +11,14 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "700", "800"],
 });
 
-// Metadata global: s'aplica a totes les pàgines
+
 // Les pàgines individuals poden sobreescriure camps concrets
+// URL base: usa variable d'entorn o localhost per defecte en desenvolupament
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+// Metadata global: s'aplica a totes les pàgines
 export const metadata: Metadata = {
-  metadataBase: new URL("https://upskill.cat"), // TODO: canviar pel domini real
+  metadataBase: new URL(baseUrl),
   title: {
     default: "UpSkill — Students' Career LAB",
     template: "%s | UpSkill",
