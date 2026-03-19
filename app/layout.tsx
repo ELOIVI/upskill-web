@@ -32,13 +32,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ca_ES",
-    url: "https://upskill.cat", // TODO: canviar pel domini real quan estigui disponible
     siteName: "UpSkill — Students' Career LAB",
     title: "UpSkill — Students' Career LAB",
     description: "La comunitat que impulsa la teva carrera professional des de la universitat.",
     images: [
       {
-        url: "/images/brand/og_image.png", // TODO: crear imatge OG de 1200x630px
+        url: "/images/brand/og_image.png", 
         width: 1200,
         height: 630,
         alt: "UpSkill — Students' Career LAB",
