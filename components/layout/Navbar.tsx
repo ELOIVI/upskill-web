@@ -82,16 +82,11 @@ export default function Navbar() {
     <header className="bg-us-cream border-b-[1.5px] border-us-dark sticky top-0 z-50">
       <nav className="flex items-center justify-between px-8 py-4">
 
-        {/* TODO: substituir PNG per SVG quan estigui disponible */}
         <Link href="/" onClick={() => setMenuObert(false)}>
-          <Image
-            src="/images/brand/7_StudentsCareerLab_Rectangular_2.png"
+          <img
+            src="/images/brand/7_StudentsCareerLab_Rectangular_2.svg"
             alt="UpSkill: Students' Career LAB"
-            width={180}
-            height={48}
-            priority
             className="h-12 w-auto"
-            style={{ width: "auto", height: "3rem" }}
           />
         </Link>
 
