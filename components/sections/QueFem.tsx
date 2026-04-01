@@ -1,8 +1,6 @@
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 import { Users, Monitor, Mic } from "lucide-react";
 
-// Secció "Què fem": cards amb els serveis principals de l'associació
-export default function QuesFem() {
 
   // Icona LinkedIn: SVG inline perquè Lucide ha deprecat les icones de marques :()
   const IconoLinkedin = () => (
@@ -12,6 +10,10 @@ export default function QuesFem() {
     <circle cx="4" cy="4" r="2"/>
   </svg>
 );
+
+// Secció "Què fem": cards amb els serveis principals de l'associació
+export default function QuesFem() {
+
   // Llista de serveis: afegir o modificar aquí per actualitzar les cards
   const serveis = [
   {

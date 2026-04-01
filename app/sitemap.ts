@@ -1,5 +1,7 @@
 import { membres } from "@/lib/equip";
 import type { MetadataRoute } from "next";
+export const dynamic = "force-static";
+
 
 // Sitemap: ajuda Google a indexar totes les pàgines de la web
 export default function sitemap(): MetadataRoute.Sitemap {

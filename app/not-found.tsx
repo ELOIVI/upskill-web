@@ -8,11 +8,9 @@ export default function NotFound() {
 
       {/* Logo */}
       <Link href="/" className="mb-12">
-        <Image
-          src="/images/brand/7_StudentsCareerLab_Rectangular_2.png"
+        <img
+          src="/images/brand/7_StudentsCareerLab_Rectangular_2.svg"
           alt="UpSkill: Students' Career LAB"
-          width={180}
-          height={48}
           className="h-10 w-auto opacity-60"
         />
       </Link>
