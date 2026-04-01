@@ -19,6 +19,12 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 // Metadata global: s'aplica a totes les pàgines
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+
+  // URL canònica: evita contingut duplicat per paràmetres d'URL
+  alternates: {
+    canonical: "/",
+  },
+
   title: {
     default: "UpSkill — Students' Career LAB",
     template: "%s | UpSkill",
@@ -63,6 +69,30 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ca" suppressHydrationWarning>
       <body className={`${jakarta.variable} font-[family-name:var(--font-jakarta)] antialiased bg-us-cream`}>
+  
+        {/* Schema JSON-LD: ajuda Google a entendre l'organització */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "UpSkill — Students' Career LAB",
+              "description": "La comunitat que impulsa la teva carrera professional des de la universitat.",
+              "url": baseUrl,
+              "logo": `${baseUrl}/images/brand/7_StudentsCareerLab_Rectangular_2.png`,
+              "sameAs": [
+                "https://instagram.com/upskill.careerlab",
+                "https://linkedin.com/company/upskill-students-career-lab"
+              ],
+              "parentOrganization": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universitat Rovira i Virgili",
+                "url": "https://www.urv.cat"
+              }
+            })
+          }}
+        />
         <Navbar />
         <Banner />
         {children}

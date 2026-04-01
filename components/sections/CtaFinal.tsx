@@ -37,6 +37,12 @@ export default function CtaFinal() {
       </div>
       </AnimacioEntrada>
 
+      {/* Micro-copy: elimina objeccions i genera confiança */}
+      <AnimacioEntrada retard={300}>
+        <p className="text-[12px] text-us-cream opacity-35 mt-4">
+          100% gratuït · Només per a estudiants de la URV 
+        </p>
+      </AnimacioEntrada>
     </section>
   );
 }
