@@ -12,6 +12,7 @@ export default function Hero() {
       {/* Símbol animat del logo */}
       <AnimacioEntrada>
         <svg
+          aria-hidden="true"
           width="80"
           height="140"
           viewBox="-1 65 80 80"

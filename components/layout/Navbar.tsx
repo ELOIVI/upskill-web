@@ -56,6 +56,12 @@ export default function Navbar() {
   };
 }, [pathname]);
 
+  // Bloqueja el scroll del body quan el menú mòbil és obert
+  useEffect(() => {
+    document.body.style.overflow = menuObert ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuObert]);
+  
   // Funció per fer scroll suau a una secció
   // Si la secció no existeix a la pàgina actual, navega a la home primer
   const scrollASeccio = (e: React.MouseEvent, href: string) => {
@@ -117,11 +123,13 @@ export default function Navbar() {
           Uneix-te
         </a>
 
+        
         {/* Botó hamburguesa: visible només en mòbil */}
         <button
           onClick={() => setMenuObert(!menuObert)}
           className="md:hidden flex flex-col gap-[5px] p-2"
           aria-label={menuObert ? "Tancar menú" : "Obrir menú"}
+          aria-expanded={menuObert}
         >
           <span className={`block w-6 h-[1.5px] bg-us-dark transition-transform duration-300 origin-center ${menuObert ? "translate-y-[6.5px] rotate-45" : ""}`} />
           <span className={`block w-6 h-[1.5px] bg-us-dark transition-opacity duration-300 ${menuObert ? "opacity-0" : ""}`} />

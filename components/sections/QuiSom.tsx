@@ -32,7 +32,7 @@ export default function QuiSom() {
         {preguntes.map((p, i) => (
           <AnimacioEntrada key={p} retard={i * 100}>
             <div className="border-l-[3px] border-us-purple pl-5">
-              <p className="text-[15px] text-us-cream opacity-75 leading-relaxed font-medium">{p}</p>
+              <h3 className="text-[15px] text-us-cream/75 leading-relaxed font-medium">{p}</h3>
             </div>
           </AnimacioEntrada>
         ))}
@@ -43,15 +43,15 @@ export default function QuiSom() {
         <div className="grid grid-cols-3 gap-4 max-w-xs">
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-amber leading-none mb-1">URV</p>
-            <p className="text-[11px] text-us-cream opacity-45">Universitat</p>
+            <p className="text-[11px] text-us-cream/45">Universitat</p>
           </div>
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-blue leading-none mb-1">0€</p>
-            <p className="text-[11px] text-us-cream opacity-45">Per unir-te</p>
+            <p className="text-[11px] text-us-cream/45">Per unir-te</p>
           </div>
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-purple leading-none mb-1">Tots</p>
-            <p className="text-[11px] text-us-cream opacity-45">Els graus</p>
+            <p className="text-[11px] text-us-cream/45">Els graus</p>
           </div>
         </div>
       </AnimacioEntrada>
