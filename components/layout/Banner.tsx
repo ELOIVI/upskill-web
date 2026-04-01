@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-// Banner — avís temporal per a la primera sessió
+// Banner — avís temporal per a la segona sessió
 // Quan ja no sigui rellevant, eliminar la importació a app/layout.tsx
 export default function Banner() {
   return (
     <div className="bg-us-amber px-8 py-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
       {/* Informació de l'event */}
       <p className="text-us-dark text-[13px] font-bold">
-        Primera sessió — 18 de març, 17h
+        Propera sessió - 8 d'abril, 15:30h
       </p>
       <p className="text-us-dark text-[13px] opacity-75">
         Aula 418 · Campus Catalunya · URV
@@ -22,7 +22,6 @@ export default function Banner() {
       >
         Inscriu-te aquí →
       </Link>
-
     </div>
   );
 }
