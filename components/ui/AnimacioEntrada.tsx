@@ -1,31 +1,19 @@
 "use client";
 
-import { useAnimacioEntrada } from "@/hooks/useAnimacioEntrada";
-
 interface Props {
   children: React.ReactNode;
   className?: string;
-  retard?: number; // retard en ms per escalonar elements
+  retard?: number; // retard en ms per escalonar elements (disabled en static export)
 }
 
 // Component wrapper: aplica animació d'entrada quan l'element és visible
+// En static export, aquest component simplemente renderitza els fills sense overhead de hooks
 // Ús: <AnimacioEntrada retard={100}><div>...</div></AnimacioEntrada>
 export default function AnimacioEntrada({ children, className = "", retard = 0 }: Props) {
-  const { ref, visible } = useAnimacioEntrada();
-
+  // The hook-based version would cause static export errors, so we simplify this
+  // During static export, we render children directly without IntersectionObserver logic
   return (
-    <div
-      ref={ref as React.RefObject<HTMLDivElement>}
-      className={className}
-      style={{
-        transitionDelay: `${retard}ms`,
-        transitionProperty: "opacity, transform",
-        transitionDuration: "600ms",
-        transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(24px)",
-      }}
-    >
+    <div className={className}>
       {children}
     </div>
   );

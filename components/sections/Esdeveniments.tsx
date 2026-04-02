@@ -1,9 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 
+interface EventimentiProps {
+  label: string;
+  title: string;
+  description: string;
+  upcoming: string;
+  past: string;
+  register: string;
+  closed: string;
+}
+
 // Secció "Esdeveniments": calendari de sessions i activitats
-// Afegir nous esdeveniments a l'array per actualitzar la secció
-export default function Esdeveniments() {
+// Afegir nous esdevenimentsarr a l'array per actualitzar la secció
+export default function Esdeveniments({ label, title, description, upcoming, past, register, closed }: EventimentiProps) {
   const esdeveniments = [
     {
       data: "18 mar",
@@ -35,13 +47,13 @@ export default function Esdeveniments() {
       {/* Capçalera de secció */}
       <AnimacioEntrada>
         <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-dark mb-2">
-          Esdeveniments
+          {label}
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-dark mb-3">
-          Properes activitats
+          {title}
         </h2>
         <p className="text-[16px] text-us-dark opacity-55 max-w-lg leading-relaxed mb-10">
-          Sessions, tallers i trobades per continuar creixent junts.
+          {description}
         </p>
       </AnimacioEntrada>
 
@@ -71,12 +83,12 @@ export default function Esdeveniments() {
               <div className="flex flex-col gap-1 flex-1">
                 {e.actiu && (
                   <span className="inline-block self-start bg-us-purple text-us-cream text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider mb-1">
-                    Pròximament
+                    {upcoming}
                   </span>
                 )}
                 {e.passat && (
                   <span className="inline-block self-start bg-us-amber/30 text-us-dark text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider mb-1">
-                    Ja ha passat
+                    {past}
                   </span>
                 )}
                 <h3 className="text-[17px] font-bold text-us-dark">{e.titol}</h3>
@@ -92,12 +104,12 @@ export default function Esdeveniments() {
                     rel="noopener noreferrer"
                     className="self-start mt-3 bg-us-dark text-us-cream text-[12px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity"
                   >
-                    Inscriu-te →
+                    {register} →
                   </Link>
                 )}
                 {e.passat && (
                   <span className="self-start mt-3 bg-us-dark/20 text-us-dark text-[12px] font-semibold px-5 py-2 rounded-full cursor-not-allowed">
-                    Inscripcions tancades
+                    {closed}
                   </span>
                 )}
               </div>

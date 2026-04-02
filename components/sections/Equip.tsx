@@ -1,36 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 import { membres } from "@/lib/equip";
 
+interface EquipProps {
+  label: string;
+  title: string;
+  description: string;
+  viewProfile: string;
+  currentLocale: string;
+}
+
 // Secció "Equip": membres actuals de l'associació
 // Les dades es gestionen a lib/equip.ts
-export default function Equip() {
+export default function Equip({
+  label,
+  title,
+  description,
+  viewProfile,
+  currentLocale,
+}: EquipProps) {
   return (
     <section id="equip" className="px-8 py-16 border-t-[1.5px] border-us-cream/20 bg-us-dark scroll-mt-20">
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
         <p className="text-[10px] font-semibold tracking-widest uppercase text-us-cream/60 mb-2">
-          L'equip
+          {label}
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-cream mb-3">
-          Les persones del darrere
+          {title}
         </h2>
         <p className="text-[16px] text-us-cream/70 max-w-lg leading-relaxed mb-10">
-          Estudiants com tu, amb ganes de fer les coses d'una altra manera.
+          {description}
         </p>
       </AnimacioEntrada>
 
       {/* Grid de membres */}
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-6 items-stretch">
+
         {membres.map((m, i) => (
           <AnimacioEntrada key={m.slug} retard={i * 100}>
 
             {/* Card: clicable cap al perfil individual */}
-            <Link href={`/equip/${m.slug}`}>
-              <div className="border-[1.5px] border-us-cream/20 rounded-xl p-8 text-center w-56 bg-us-cream hover:border-us-purple transition-all duration-300 cursor-pointer">
-
+            <Link href={`/${currentLocale}/equip/${m.slug}`}>
+              <div className="border-[1.5px] border-us-cream/20 rounded-xl p-8 text-center w-56 bg-us-cream hover:border-us-purple transition-all duration-300 cursor-pointer h-full flex flex-col items-center justify-between">
                 <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-[1.5px] border-us-dark/10">
                   <Image
                     src={m.foto}
@@ -42,12 +58,12 @@ export default function Equip() {
                 </div>
 
                 <h3 className="text-[15px] font-bold text-us-dark mb-1">{m.nom} {m.cognom}</h3>
-                {/* Rol del membre */}
-                <p className="text-[13px] text-us-dark/70 mb-3">{m.rol}</p>
+                {/* Rol del membre en la locale actual */}
+                <p className="text-[13px] text-us-dark/70 mb-3">{m.rol[currentLocale as keyof typeof m.rol] || m.rol.ca}</p>
 
                 {/* Indicador visual que la card és clicable */}
                 <span className="text-[11px] text-us-purple font-semibold">
-                  Veure perfil →
+                  {viewProfile}
                 </span>
 
               </div>

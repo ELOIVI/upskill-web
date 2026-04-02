@@ -4,26 +4,40 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import LangSwitcher from "@/components/layout/LangSwitcher";
 
+interface NavbarProps {
+  links: { href: string; label: string }[];
+  ctaLabel: string;
+  locale: string;
+}
 
 // Navbar: component de client per gestionar l'estat del menú mòbil i la secció activa
-// Estructura: logo | links (escriptori) | botó CTA (escriptori) | hamburguesa (mòbil)
-export default function Navbar() {
+// Estructura: logo | links (escriptori) | commutador de llengua | botó CTA (escriptori) | hamburguesa (mòbil)
+export default function Navbar({ links, ctaLabel, locale }: NavbarProps) {
   const [menuObert, setMenuObert] = useState(false);
   const [seccioActiva, setSeccioActiva] = useState("");
   const router = useRouter();
-
-  const links = [
-    { href: "#qui-som", label: "Qui som" },
-    { href: "#que-fem", label: "Què fem" },
-    { href: "#equip", label: "Equip" },
-    { href: "#esdeveniments", label: "Esdeveniments" },
-  ];
-
   const pathname = usePathname();
+
+  // Extreu la locale de la URL (la primera part si comença amb /{locale})
+  // Per defecte, és 'ca' si l'URL comença directament amb /
+  const getLocaleFromPathname = () => {
+    const parts = pathname.split("/").filter(Boolean);
+    if (parts.length === 0) return "ca"; // URL root: /
+    if (["ca", "es", "en"].includes(parts[0])) return parts[0];
+    return "ca";
+  };
+
+  const currentLocale = getLocaleFromPathname();
+
+  // Detecta si estem a la home (on les seccions són visibles)
+  const isHome =
+    pathname === "/" || (currentLocale !== "ca" && pathname === `/${currentLocale}`);
+
   // Detecta quina secció és visible: només s'executa a la home
   useEffect(() => {
-  if (pathname !== "/") return;
+  if (!isHome) return;
 
   const ids = links.map((l) => l.href.replace("#", ""));
 
@@ -77,7 +91,9 @@ export default function Navbar() {
     }
 
     // Si no existeix (estem a una subpàgina), naveguem a la home i fem scroll
-    router.push("/");
+    // Construeix l'URL correcta segons la locale actual
+    const homeUrl = currentLocale === "ca" ? "/" : `/${currentLocale}`;
+    router.push(homeUrl);
     setTimeout(() => {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -88,7 +104,11 @@ export default function Navbar() {
     <header className="bg-us-cream border-b-[1.5px] border-us-dark sticky top-0 z-50">
       <nav className="flex items-center justify-between px-8 py-4">
 
-        <Link href="/" onClick={() => setMenuObert(false)}>
+        {/* Logo */}
+        <Link
+          href={currentLocale === "ca" ? "/" : `/${currentLocale}`}
+          onClick={() => setMenuObert(false)}
+        >
           <img
             src="/images/brand/7_StudentsCareerLab_Rectangular_2.svg"
             alt="UpSkill: Students' Career LAB"
@@ -117,13 +137,16 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Commutador de llengua: visible només en escriptori */}
+        <LangSwitcher />
+
         {/* CTA: visible només en escriptori */}
         <a
           href="#uneix-te"
           onClick={(e) => scrollASeccio(e, "#uneix-te")}
           className="hidden md:block bg-us-dark text-us-cream text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity cursor-pointer"
         >
-          Uneix-te
+          {ctaLabel}
         </a>
 
         
@@ -163,7 +186,7 @@ export default function Navbar() {
             onClick={(e) => scrollASeccio(e, "#uneix-te")}
             className="bg-us-dark text-us-cream text-[14px] font-semibold px-5 py-3 rounded-full text-center hover:opacity-80 transition-opacity mt-2 cursor-pointer"
           >
-            Uneix-te
+            {ctaLabel}
           </a>
         </div>
       </div>

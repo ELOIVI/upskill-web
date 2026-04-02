@@ -1,26 +1,36 @@
+"use client";
+
 import Link from "next/link";
 
-// Banner — avís temporal per a la segona sessió
-// Quan ja no sigui rellevant, eliminar la importació a app/layout.tsx
-export default function Banner() {
+interface BannerProps {
+  session: string;
+  date: string;
+  location: string;
+  cta: string;
+  ctaUrl: string;
+}
+
+// Banner: avís temporal per a la propera sessió
+// Mostra informació localitzada rebuda com a props
+export default function Banner({ session, date, location, cta, ctaUrl }: BannerProps) {
   return (
     <div className="bg-us-amber px-8 py-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
       {/* Informació de l'event */}
       <p className="text-us-dark text-[13px] font-bold">
-        Propera sessió - 8 d'abril, 15:30h
+        {session} : {date}
       </p>
       <p className="text-us-dark text-[13px] opacity-75">
-        Aula 418 · Campus Catalunya · URV
+        {location}
       </p>
 
       {/* Enllaç d'inscripció, en mòbil alineat a l'esquerra, en escriptori a la dreta */}
       <Link
-        href="https://lnkd.in/eGJrXYYZ"
+        href={ctaUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="sm:ml-auto text-us-dark text-[13px] font-bold underline hover:opacity-70 transition-opacity"
       >
-        Inscriu-te aquí →
+        {cta} →
       </Link>
     </div>
   );

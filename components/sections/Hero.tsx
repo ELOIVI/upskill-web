@@ -1,11 +1,26 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
 
+interface HeroProps {
+  pill: string;
+  title: string;
+  titleHighlight: string;
+  subtitle: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+}
 
 // Hero: primera secció visible, per sobre del fold
 // Conté: barres decoratives de marca, títol principal, subtítol i botons CTA
-export default function Hero() {
+export default function Hero({
+  pill,
+  title,
+  titleHighlight,
+  subtitle,
+  ctaPrimary,
+  ctaSecondary,
+}: HeroProps) {
   return (
     <section className="px-8 pt-5 pb-16 bg-us-cream">
 
@@ -73,39 +88,42 @@ export default function Hero() {
       {/* Pill de categoria */}
       <AnimacioEntrada retard={100}>
         <span className="inline-block bg-us-dark text-us-cream text-[11px] font-semibold px-4 py-1 rounded-full uppercase tracking-widest mb-5">
-          Students' Career LAB · URV
+          {pill}
         </span>
       </AnimacioEntrada>
 
       {/* Títol principal */}
       <AnimacioEntrada retard={200}>
-        <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05] text-us-dark max-w-3xl mb-5">
-          Students who want{" "}
-          <em className="not-italic text-us-purple">more</em>
+        <h1 className="text-[56px] md:text-[68px] font-black tracking-tight text-us-dark leading-none mb-5">
+          {title}{" "}
+          <span className="text-us-purple">{titleHighlight}</span>
         </h1>
       </AnimacioEntrada>
 
       {/* Subtítol */}
       <AnimacioEntrada retard={300}>
-        <p className="text-[18px] text-us-muted max-w-lg leading-relaxed mb-10">
-          La comunitat que impulsa la teva carrera professional des de la universitat. Networking, LinkedIn, pràctiques i molt més.
+        <p className="text-[18px] text-us-dark/75 max-w-xl leading-relaxed mb-10">
+          {subtitle}
         </p>
       </AnimacioEntrada>
 
       {/* Botons CTA */}
       <AnimacioEntrada retard={400}>
-        <div className="flex gap-3 flex-wrap justify-center sm:justify-start">          <Link
-            href="#uneix-te"
-            className="bg-us-dark text-us-cream text-[14px] font-semibold px-8 py-3 rounded-full hover:opacity-80 transition-opacity"
+        <div className="flex gap-4 flex-wrap mb-8">
+          <a
+            href="https://lnkd.in/eGJrXYYZ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-us-dark text-us-cream text-[14px] font-bold px-8 py-4 rounded-full hover:opacity-80 transition-opacity"
           >
-            Uneix-te a UpSkill
-          </Link>
-          <Link
+            {ctaPrimary}
+          </a>
+          <a
             href="#qui-som"
-            className="border-[1.5px] border-us-dark text-us-dark text-[14px] font-semibold px-8 py-3 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors"
+            className="border-[1.5px] border-us-dark text-us-dark text-[14px] font-semibold px-8 py-4 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors cursor-pointer"
           >
-            Saber-ne més
-          </Link>
+            {ctaSecondary}
+          </a>
         </div>
       </AnimacioEntrada>
 

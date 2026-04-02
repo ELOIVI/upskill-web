@@ -1,0 +1,113 @@
+{
+  "navbar": {
+    "links": {
+      "whyUs": "About us",
+      "whatWeDo": "What we do",
+      "team": "Team",
+      "events": "Events"
+    },
+    "cta": "Join us"
+  },
+  "banner": {
+    "session": "Next session",
+    "date": "April 8th, 3:30 PM",
+    "location": "Room 418 · Campus Catalunya · URV",
+    "cta": "Register here"
+  },
+  "hero": {
+    "pill": "Students' Career LAB · URV",
+    "title": "Students who want",
+    "titleHighlight": "more",
+    "subtitle": "The community that drives your professional career from university. Networking, LinkedIn, internships and much more.",
+    "ctaPrimary": "Join UpSkill",
+    "ctaSecondary": "Learn more"
+  },
+  "whyUs": {
+    "label": "About us",
+    "title": "We were born to fill the gap that the university doesn't cover",
+    "description": "UpSkill is a URV student association created by and for students with initiative. A space to share experiences, resources and opportunities, and build community.",
+    "questions": [
+      "How to use LinkedIn while still being a student?",
+      "How to break the barrier between university and company before graduating?",
+      "How to do networking without it being awkward?",
+      "How to find internships that truly benefit you?"
+    ],
+    "stats": {
+      "university": "University",
+      "free": "To join",
+      "grades": "All degrees"
+    }
+  },
+  "whatWeDo": {
+    "label": "What we do",
+    "title": "Everything you need to stand out",
+    "description": "Practical training for students of all URV degrees who want to jump into the professional world with an advantage.",
+    "services": {
+      "linkedin": {
+        "title": "LinkedIn & Portfolio",
+        "description": "Build a professional presence that opens doors before you graduate."
+      },
+      "networking": {
+        "title": "Real networking",
+        "description": "Connect with professionals and students who share your ambitions."
+      },
+      "careers": {
+        "title": "Job opportunities",
+        "description": "Know the real job market and decide your path with first-hand information."
+      },
+      "speaking": {
+        "title": "Public speaking",
+        "description": "Lose the fear of communicating and learn to defend your ideas with confidence."
+      }
+    }
+  },
+  "team": {
+    "label": "The team",
+    "title": "The people behind it",
+    "description": "Students like you, wanting to do things differently.",
+    "viewProfile": "View profile →",
+    "memberLabel": "Team member",
+    "studies": "Studies",
+    "university": "University",
+    "bioPending": "We're finishing preparing this profile. Soon you'll find more personal and professional information.",
+    "back": "← Back to team"
+  },
+  "events": {
+    "label": "Events",
+    "title": "Upcoming activities",
+    "description": "Sessions, workshops and meetings to keep growing together.",
+    "upcoming": "Coming soon",
+    "past": "Already happened",
+    "register": "Register →",
+    "closed": "Registration closed"
+  },
+  "cta": {
+    "title": "Want to go one step further?",
+    "description": "Join UpSkill and start building your professional future now.",
+    "primary": "Join now",
+    "secondary": "Instagram @upskill.careerlab",
+    "microcopy": "100% free · Only for URV students"
+  },
+  "footer": {
+    "copyright": "© 2026 UpSkill - Students' Career LAB · URV",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "notFound": {
+    "error": "Error 404",
+    "title": "This page doesn't exist",
+    "description": "Maybe you typed the URL wrong or the page moved. Go back to the beginning and keep exploring.",
+    "home": "Back to home",
+    "events": "View events"
+  },
+  "contact": {
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "langSwitcher": {
+    "ca": "CA",
+    "es": "ES",
+    "en": "EN"
+  }
+}

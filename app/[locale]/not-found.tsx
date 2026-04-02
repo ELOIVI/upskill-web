@@ -1,7 +1,8 @@
+import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 // Pàgina 404: es mostra quan l'usuari visita una ruta que no existeix
+// Nota: next-intl automàticament està dins del layout de [locale]
 export default function NotFound() {
   return (
     <main className="min-h-screen bg-us-cream flex flex-col items-center justify-center px-8 text-center">
@@ -47,14 +48,14 @@ export default function NotFound() {
       </div>
 
       {/* Barres decoratives de marca */}
-        <svg
+      <svg
         width="80"
         height="140"
         viewBox="-1 65 80 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="mt-16 opacity-20"
-        >
+      >
         {/* Barra blava amb chevron */}
         <polygon points="8,70 16,82 12,82 8,76 4,82 0,82" fill="#63B5F1" />
         <rect x="0" y="85" width="16" height="55" fill="#63B5F1" />
@@ -64,8 +65,7 @@ export default function NotFound() {
 
         {/* Barra ambre */}
         <rect x="48" y="46" width="16" height="94" fill="#FFBD59" />
-        </svg>
-
-            </main>
-        );
+      </svg>
+    </main>
+  );
 }

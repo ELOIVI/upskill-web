@@ -1,0 +1,113 @@
+{
+  "navbar": {
+    "links": {
+      "whyUs": "Qui som",
+      "whatWeDo": "Què fem",
+      "team": "Equip",
+      "events": "Esdeveniments"
+    },
+    "cta": "Uneix-te"
+  },
+  "banner": {
+    "session": "Propera sessió",
+    "date": "8 d'abril, 15:30h",
+    "location": "Aula 418 · Campus Catalunya · URV",
+    "cta": "Inscriu-te aquí"
+  },
+  "hero": {
+    "pill": "Students' Career LAB · URV",
+    "title": "Estudiants que volen",
+    "titleHighlight": "més",
+    "subtitle": "La comunitat que impulsa la teva carrera professional des de la universitat. Networking, LinkedIn, pràctiques i molt més.",
+    "ctaPrimary": "Uneix-te a UpSkill",
+    "ctaSecondary": "Saber-ne més"
+  },
+  "whyUs": {
+    "label": "Qui som",
+    "title": "Vam néixer per omplir el buit que la universitat no cobreix",
+    "description": "UpSkill és una associació d'estudiants de la URV creada per i per a estudiants amb iniciativa. Un espai per compartir experiències, recursos i oportunitats, i construir comunitat.",
+    "questions": [
+      "Com fer servir LinkedIn quan encara ets estudiant?",
+      "Com trencar la barrera entre universitat i empresa abans de graduar-te?",
+      "Com fer networking sense que sigui incòmode?",
+      "Com trobar pràctiques que realment t'aportin?"
+    ],
+    "stats": {
+      "university": "Universitat",
+      "free": "Per unir-te",
+      "grades": "Els graus"
+    }
+  },
+  "whatWeDo": {
+    "label": "Què fem",
+    "title": "Tot el que necessites per destacar",
+    "description": "Formació pràctica per a estudiants de tots els graus de la URV que volen fer el salt al món professional amb avantatge.",
+    "services": {
+      "linkedin": {
+        "title": "LinkedIn & Portfolio",
+        "description": "Construeix una presència professional que obri portes abans de graduar-te."
+      },
+      "networking": {
+        "title": "Networking real",
+        "description": "Connecta amb professionals i estudiants que comparteixen les teves ambicions."
+      },
+      "careers": {
+        "title": "Sortides laborals",
+        "description": "Coneix el mercat laboral real i decideix el teu camí amb informació de primera mà."
+      },
+      "speaking": {
+        "title": "Parlar en públic",
+        "description": "Perd la por a comunicar i aprèn a defensar les teves idees amb confiança."
+      }
+    }
+  },
+  "team": {
+    "label": "L'equip",
+    "title": "Les persones del darrere",
+    "description": "Estudiants com tu, amb ganes de fer les coses d'una altra manera.",
+    "viewProfile": "Veure perfil →",
+    "memberLabel": "Membre de l'equip",
+    "studies": "Estudis",
+    "university": "Universitat",
+    "bioPending": "Estem acabant de preparar aquest perfil. Ben aviat hi trobaràs més informació personal i professional.",
+    "back": "← Tornar a l'equip"
+  },
+  "events": {
+    "label": "Esdeveniments",
+    "title": "Properes activitats",
+    "description": "Sessions, tallers i trobades per continuar creixent junts.",
+    "upcoming": "Pròximament",
+    "past": "Ja ha passat",
+    "register": "Inscriu-te →",
+    "closed": "Inscripcions tancades"
+  },
+  "cta": {
+    "title": "Vols anar un pas per davant?",
+    "description": "Uneix-te a UpSkill i comença a construir el teu futur professional des d'ara.",
+    "primary": "Uneix-te ara",
+    "secondary": "Instagram @upskill.careerlab",
+    "microcopy": "100% gratuït · Només per a estudiants de la URV"
+  },
+  "footer": {
+    "copyright": "© 2026 UpSkill - Students' Career LAB · URV",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "notFound": {
+    "error": "Error 404",
+    "title": "Aquesta pàgina no existeix",
+    "description": "Potser has escrit malament la URL o la pàgina s'ha mogut. Torna a l'inici i continua explorant.",
+    "home": "Tornar a l'inici",
+    "events": "Veure esdeveniments"
+  },
+  "contact": {
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "langSwitcher": {
+    "ca": "CA",
+    "es": "ES",
+    "en": "EN"
+  }
+}
