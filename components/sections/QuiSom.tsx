@@ -16,13 +16,13 @@ export default function QuiSom() {
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-cream mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-cream/60 mb-2">
           Qui som
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-cream leading-tight mb-5 max-w-md">
           Vam néixer per omplir el buit que la universitat no cobreix
         </h2>
-        <p className="text-[16px] text-us-cream opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-cream/70 max-w-lg leading-relaxed mb-10">
           UpSkill és una associació d'estudiants de la URV creada per i per a estudiants amb iniciativa. Un espai per compartir experiències, recursos i oportunitats, i construir comunitat.
         </p>
       </AnimacioEntrada>
@@ -43,15 +43,15 @@ export default function QuiSom() {
         <div className="grid grid-cols-3 gap-4 max-w-xs">
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-amber leading-none mb-1">URV</p>
-            <p className="text-[11px] text-us-cream/45">Universitat</p>
+            <p className="text-[11px] text-us-cream/60">Universitat</p>
           </div>
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-blue leading-none mb-1">0€</p>
-            <p className="text-[11px] text-us-cream/45">Per unir-te</p>
+            <p className="text-[11px] text-us-cream/60">Per unir-te</p>
           </div>
           <div className="text-center">
             <p className="text-[36px] font-extrabold text-us-purple leading-none mb-1">Tots</p>
-            <p className="text-[11px] text-us-cream/45">Els graus</p>
+            <p className="text-[11px] text-us-cream/60">Els graus</p>
           </div>
         </div>
       </AnimacioEntrada>

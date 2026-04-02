@@ -11,13 +11,13 @@ export default function Equip() {
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-cream mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-cream/60 mb-2">
           L'equip
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-cream mb-3">
           Les persones del darrere
         </h2>
-        <p className="text-[16px] text-us-cream opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-cream/70 max-w-lg leading-relaxed mb-10">
           Estudiants com tu, amb ganes de fer les coses d'una altra manera.
         </p>
       </AnimacioEntrada>
@@ -41,11 +41,12 @@ export default function Equip() {
                   />
                 </div>
 
-                <h4 className="text-[15px] font-bold text-us-dark mb-1">{m.nom} {m.cognom}</h4>
-                <p className="text-[13px] text-us-dark opacity-50 mb-3">{m.rol}</p>
+                <h3 className="text-[15px] font-bold text-us-dark mb-1">{m.nom} {m.cognom}</h3>
+                {/* Rol del membre */}
+                <p className="text-[13px] text-us-dark/70 mb-3">{m.rol}</p>
 
                 {/* Indicador visual que la card és clicable */}
-                <span className="text-[11px] text-us-purple font-semibold opacity-70">
+                <span className="text-[11px] text-us-purple font-semibold">
                   Veure perfil →
                 </span>
 

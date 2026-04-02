@@ -46,13 +46,13 @@ export default function QuesFem() {
     <section id="que-fem" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream scroll-mt-20">
 
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-dark mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-dark/60 mb-2">
           Què fem
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-dark mb-2">
           Tot el que necessites<br />per destacar
         </h2>
-        <p className="text-[16px] text-us-dark opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-dark/70 max-w-lg leading-relaxed mb-10">
           Formació pràctica per a estudiants de tots els graus de la URV que volen fer el salt al món professional amb avantatge.
         </p>
       </AnimacioEntrada>
@@ -65,7 +65,7 @@ export default function QuesFem() {
                 {s.icon}
               </div>
               <h3 className="text-[14px] font-bold text-us-dark mb-1">{s.titol}</h3>
-              <p className="text-[12px] text-us-dark opacity-60 leading-relaxed">{s.descripcio}</p>
+              <p className="text-[12px] text-us-dark/70 leading-relaxed">{s.descripcio}</p>
             </div>
           </AnimacioEntrada>
         ))}

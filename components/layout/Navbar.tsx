@@ -92,6 +92,9 @@ export default function Navbar() {
           <img
             src="/images/brand/7_StudentsCareerLab_Rectangular_2.svg"
             alt="UpSkill: Students' Career LAB"
+            width={180}
+            height={48}
+            fetchPriority="high"
             className="h-12 w-auto"
           />
         </Link>
