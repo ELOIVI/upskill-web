@@ -25,12 +25,30 @@ export interface Membre {
 
 export const membres: Membre[] = [
   {
+    nom: "Lucia",
+    cognom: "Guerrero",
+    rol: {
+      ca: "Presidenta",
+      es: "Presidenta",
+      en: "President",
+    },
+    slug: "lucia-guerrero",
+    foto: "/images/team/lucia_foto.webp",
+    estudis: "Psicologia",
+    universitat: "Universitat Rovira i Virgili",
+    bio: {
+      ca: "Estudiant de tercer de Psicologia amb menció en Recursos Humans i Organitzacions, realitzant pràctiques en Talent Acquisition en una empresa internacional del sector tecnològic.\n\nCompto amb experiència internacional en l'àmbit acadèmic, participant en programes formatius en entorns multiculturals, la qual cosa m'ha permès desenvolupar una visió global i adaptativa.\n\nCom a cofundadora i presidenta d'UpSkill, lidero l'organització i temporització de les sessions, la definició de continguts i la coordinació de l'equip, així com la gestió de la comunicació i la presència digital del projecte.",
+      es: "Estudiante de tercero de Psicología con mención en Recursos Humanos y Organizaciones, realizando prácticas en Talent Acquisition en una empresa internacional del sector tecnológico.\n\nCuento con experiencia internacional en el ámbito académico, participando en programas formativos en entornos multiculturales, lo que me ha permitido desarrollar una visión global y adaptativa.\n\nComo cofundadora y presidenta de UpSkill, lidero la organización y temporización de las sesiones, la definición de contenidos y la coordinación del equipo, así como la gestión de la comunicación y la presencia digital del proyecto.",
+      en: "Third-year Psychology student specialising in Human Resources and Organisations, currently interning in Talent Acquisition at an international tech company.\n\nI have international academic experience, having participated in training programmes in multicultural environments, which has allowed me to develop a global and adaptive perspective.\n\nAs co-founder and president of UpSkill, I lead the organisation and scheduling of sessions, content definition, team coordination, and the management of communication and the project's digital presence.",
+    },
+  },
+  {
     nom: "Grecia",
     cognom: "Martínez",
     rol: {
-      ca: "Co-fundadora · Operations Lead",
-      es: "Co-fundadora · Operations Lead",
-      en: "Co-founder · Operations Lead",
+      ca: "Ops Lead",
+      es: "Ops Lead",
+      en: "Ops Lead",
     },
     slug: "grecia-martinez",
     foto: "/images/team/grecia_foto.webp",
@@ -44,25 +62,12 @@ export const membres: Membre[] = [
     linkedin: "https://www.linkedin.com/in/grecia-mart%C3%ADnez-7373b323a/",
   },
   {
-    nom: "Lucia",
-    cognom: "Guerrero",
-    rol: {
-      ca: "Co-fundadora",
-      es: "Co-fundadora",
-      en: "Co-founder",
-    },
-    slug: "lucia-guerrero",
-    foto: "/images/team/lucia_foto.webp",
-    estudis: "Psicologia",
-    universitat: "Universitat Rovira i Virgili",
-  },
-  {
     nom: "Eloi",
     cognom: "Viciana",
     rol: {
-      ca: "CTO",
-      es: "CTO",
-      en: "CTO",
+      ca: "Tech Lead",
+      es: "Tech Lead",
+      en: "Tech Lead",
     },
     slug: "eloi-viciana",
     foto: "/images/team/eloi_foto.webp",

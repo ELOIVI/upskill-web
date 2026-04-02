@@ -34,7 +34,7 @@ export default function QueFem({ label, title, description, services }: QueFemPr
     <section id="que-fem" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream scroll-mt-20">
 
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-dark/60 mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-dark/80 mb-2">
           {label}
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-dark mb-2">

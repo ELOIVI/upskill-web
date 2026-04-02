@@ -34,8 +34,11 @@
     ],
     "stats": {
       "university": "Universidad",
+      "universityValue": "URV",
       "free": "Para unirte",
-      "grades": "Los grados"
+      "freeValue": "0€",
+      "grades": "Los grados",
+      "gradesValue": "Todos"
     }
   },
   "whatWeDo": {

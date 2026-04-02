@@ -7,9 +7,12 @@ interface QuiSomProps {
   title: string;
   description: string;
   questions: string[];
-  statsUniversity: string;
-  statsFree: string;
-  statsGrades: string;
+  statsUniversityValue: string;
+  statsUniversityLabel: string;
+  statsFreeValue: string;
+  statsFreeLabelabel: string;
+  statsGradesValue: string;
+  statsGradesLabel: string;
 }
 
 // Secció "Qui som": presentació de l'associació sobre fons fosc
@@ -19,9 +22,12 @@ export default function QuiSom({
   title,
   description,
   questions,
-  statsUniversity,
-  statsFree,
-  statsGrades,
+  statsUniversityValue,
+  statsUniversityLabel,
+  statsFreeValue,
+  statsFreeLabelabel,
+  statsGradesValue,
+  statsGradesLabel,
 }: QuiSomProps) {
 
   return (
@@ -55,16 +61,16 @@ export default function QuiSom({
       <AnimacioEntrada retard={400}>
         <div className="grid grid-cols-3 gap-4 max-w-xs">
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-us-amber leading-none mb-1">URV</p>
-            <p className="text-[11px] text-us-cream/60">{statsUniversity}</p>
+            <p className="text-[36px] font-extrabold text-us-blue leading-none mb-1">{statsUniversityValue}</p>
+            <p className="text-[11px] text-us-cream/60">{statsUniversityLabel}</p>
           </div>
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-us-blue leading-none mb-1">0€</p>
-            <p className="text-[11px] text-us-cream/60">{statsFree}</p>
+            <p className="text-[36px] font-extrabold text-[#9966ff] leading-none mb-1">{statsFreeValue}</p>
+            <p className="text-[11px] text-us-cream/60">{statsFreeLabelabel}</p>
           </div>
           <div className="text-center">
-            <p className="text-[36px] font-extrabold text-us-purple leading-none mb-1">Tots</p>
-            <p className="text-[11px] text-us-cream/60">{statsGrades}</p>
+            <p className="text-[36px] font-extrabold text-us-amber leading-none mb-1">{statsGradesValue}</p>
+            <p className="text-[11px] text-us-cream/60">{statsGradesLabel}</p>
           </div>
         </div>
       </AnimacioEntrada>

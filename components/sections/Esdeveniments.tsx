@@ -46,13 +46,13 @@ export default function Esdeveniments({ label, title, description, upcoming, pas
 
       {/* Capçalera de secció */}
       <AnimacioEntrada>
-        <p className="text-[10px] font-semibold tracking-widest uppercase opacity-40 text-us-dark mb-2">
+        <p className="text-[10px] font-semibold tracking-widest uppercase text-us-dark/80 mb-2">
           {label}
         </p>
         <h2 className="text-[38px] font-extrabold tracking-tight text-us-dark mb-3">
           {title}
         </h2>
-        <p className="text-[16px] text-us-dark opacity-55 max-w-lg leading-relaxed mb-10">
+        <p className="text-[16px] text-us-dark/80 max-w-lg leading-relaxed mb-10">
           {description}
         </p>
       </AnimacioEntrada>
@@ -73,7 +73,8 @@ export default function Esdeveniments({ label, title, description, upcoming, pas
               {/* Data: columna esquerra */}
               <div className="flex flex-col items-center justify-center min-w-16 text-center">
                 <span className="text-[28px] font-extrabold text-us-dark leading-none">{e.data.split(" ")[0]}</span>
-                <span className="text-[13px] font-semibold text-us-dark uppercase opacity-50">{e.data.split(" ")[1]}</span>
+                <span className="text-[13px] font-semibold text-us-dark uppercase">{e.data.split(" ")[1]}</span>
+                <span className="text-[12px] text-us-dark font-medium">{e.data.split(" ")[2]}</span>
               </div>
 
               {/* Separador vertical */}
@@ -94,8 +95,8 @@ export default function Esdeveniments({ label, title, description, upcoming, pas
                 <h3 className="text-[17px] font-bold text-us-dark">{e.titol}</h3>
                 <p className="text-[13px] text-us-dark opacity-60 leading-relaxed">{e.descripcio}</p>
                 <div className="flex flex-wrap gap-4 mt-2">
-                  <span className="text-[12px] text-us-dark opacity-50 font-medium">{e.dia} · {e.hora}</span>
-                  <span className="text-[12px] text-us-dark opacity-50 font-medium">{e.lloc}</span>
+                  <span className="text-[12px] text-us-dark font-medium">{e.dia} · {e.hora}</span>
+                  <span className="text-[12px] text-us-dark font-medium">{e.lloc}</span>
                 </div>
                 {e.inscripcio && !e.passat && (
                   <Link

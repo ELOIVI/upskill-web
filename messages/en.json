@@ -34,8 +34,11 @@
     ],
     "stats": {
       "university": "University",
+      "universityValue": "URV",
       "free": "To join",
-      "grades": "All degrees"
+      "freeValue": "0€",
+      "grades": "All degrees",
+      "gradesValue": "All"
     }
   },
   "whatWeDo": {

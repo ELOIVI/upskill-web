@@ -81,9 +81,12 @@ export default async function Home({ params }: HomePageProps) {
         title={t("whyUs.title")}
         description={t("whyUs.description")}
         questions={tRaw("whyUs.questions")}
-        statsUniversity={t("whyUs.stats.university")}
-        statsFree={t("whyUs.stats.free")}
-        statsGrades={t("whyUs.stats.grades")}
+        statsUniversityValue={t("whyUs.stats.universityValue")}
+        statsUniversityLabel={t("whyUs.stats.university")}
+        statsFreeValue={t("whyUs.stats.freeValue")}
+        statsFreeLabelabel={t("whyUs.stats.free")}
+        statsGradesValue={t("whyUs.stats.gradesValue")}
+        statsGradesLabel={t("whyUs.stats.grades")}
       />
       <QueFem
         label={t("whatWeDo.label")}

@@ -34,8 +34,11 @@
     ],
     "stats": {
       "university": "Universitat",
+      "universityValue": "URV",
       "free": "Per unir-te",
-      "grades": "Els graus"
+      "freeValue": "0€",
+      "grades": "Els graus",
+      "gradesValue": "Tots"
     }
   },
   "whatWeDo": {
