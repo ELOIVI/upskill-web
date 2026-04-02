@@ -19,17 +19,8 @@ export default function Navbar({ links, ctaLabel, locale }: NavbarProps) {
   const [seccioActiva, setSeccioActiva] = useState("");
   const router = useRouter();
   const pathname = usePathname();
+  const currentLocale = (["ca", "es", "en"] as const).find((l) => pathname.startsWith(`/${l}`)) || "ca";
 
-  // Extreu la locale de la URL (la primera part si comença amb /{locale})
-  // Per defecte, és 'ca' si l'URL comença directament amb /
-  const getLocaleFromPathname = () => {
-    const parts = pathname.split("/").filter(Boolean);
-    if (parts.length === 0) return "ca"; // URL root: /
-    if (["ca", "es", "en"].includes(parts[0])) return parts[0];
-    return "ca";
-  };
-
-  const currentLocale = getLocaleFromPathname();
 
   // Detecta si estem a la home (on les seccions són visibles)
   const isHome =
@@ -137,17 +128,18 @@ export default function Navbar({ links, ctaLabel, locale }: NavbarProps) {
           ))}
         </div>
 
-        {/* Commutador de llengua: visible només en escriptori */}
-        <LangSwitcher />
+        {/* CTA i selector de llengua agrupats a la dreta: escriptori */}
+        <div className="hidden md:flex items-center gap-3">
+          <LangSwitcher />
+          <a
+            href="#uneix-te"
+            onClick={(e) => scrollASeccio(e, "#uneix-te")}
+            className="bg-us-dark text-us-cream text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity cursor-pointer"
+          >
+            {ctaLabel}
+          </a>
+        </div>
 
-        {/* CTA: visible només en escriptori */}
-        <a
-          href="#uneix-te"
-          onClick={(e) => scrollASeccio(e, "#uneix-te")}
-          className="hidden md:block bg-us-dark text-us-cream text-[13px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity cursor-pointer"
-        >
-          {ctaLabel}
-        </a>
 
         
         {/* Botó hamburguesa: visible només en mòbil */}
@@ -181,10 +173,30 @@ export default function Navbar({ links, ctaLabel, locale }: NavbarProps) {
               {link.label}
             </a>
           ))}
+
+          {/* Selector de llengua: mòbil */}
+          <div className="flex gap-2">
+            {(["ca", "es", "en"] as const).map((locale) => (
+              <a
+                key={locale}
+                href={`/${locale}`}
+                onClick={() => setMenuObert(false)}
+                className={`text-[12px] font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider ${
+                  currentLocale === locale
+                    ? "bg-us-dark text-us-cream"
+                    : "border-[1px] border-us-dark/30 text-us-dark/60"
+                }`}
+              >
+                {locale}
+              </a>
+            ))}
+          </div>
+
+          {/* CTA mòbil */}
           <a
             href="#uneix-te"
             onClick={(e) => scrollASeccio(e, "#uneix-te")}
-            className="bg-us-dark text-us-cream text-[14px] font-semibold px-5 py-3 rounded-full text-center hover:opacity-80 transition-opacity mt-2 cursor-pointer"
+            className="bg-us-dark text-us-cream text-[14px] font-semibold px-5 py-3 rounded-full text-center hover:opacity-80 transition-opacity cursor-pointer"
           >
             {ctaLabel}
           </a>

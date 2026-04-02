@@ -17,7 +17,7 @@ export default function Banner({ session, date, location, cta, ctaUrl }: BannerP
     <div className="bg-us-amber px-8 py-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
       {/* Informació de l'event */}
       <p className="text-us-dark text-[13px] font-bold">
-        {session} : {date}
+        {session} - {date}
       </p>
       <p className="text-us-dark text-[13px] opacity-75">
         {location}
