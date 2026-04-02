@@ -10,7 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="ca" suppressHydrationWarning>
       <body className={`${jakarta.variable} font-[family-name:var(--font-jakarta)] antialiased bg-us-cream`}>
         {children}
       </body>
