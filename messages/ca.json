@@ -112,5 +112,26 @@
     "ca": "CA",
     "es": "ES",
     "en": "EN"
-  }
+  },
+  "form": {
+  "title": "Uneix-te a UpSkill",
+  "subtitle": "Omple el formulari i t'informarem de les properes sessions.",
+  "nom": "Com et dius?",
+  "grau": "De quin grau vens?",
+  "curs": "En quin curs estàs?",
+  "assistencia": "Tens intenció d'assistir a la següent trobada?",
+  "assistencia_si": "Sí",
+  "assistencia_potser": "No, però m'interessa assistir a altra trobada més endavant",
+  "assistencia_no": "No",
+  "comoHaTrobat": "Com has trobat UpSkill?",
+  "trobat_amics": "Amics / Companys",
+  "trobat_instagram": "Instagram",
+  "trobat_linkedin": "LinkedIn",
+  "trobat_posters": "Pòsters a la universitat",
+  "motivacio": "Per què t'interessa unir-te a UpSkill?",
+  "contacte": "Deixa'ns el teu contacte (Instagram / LinkedIn)",
+  "enviar": "Enviar inscripció",
+  "exit": "Gràcies! Ens posarem en contacte aviat.",
+  "error": "Hi ha hagut un error. Torna-ho a intentar."
+}
 }

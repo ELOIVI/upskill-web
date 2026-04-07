@@ -9,6 +9,7 @@ interface CtaFinalProps {
   primary: string;
   secondary: string;
   microcopy: string;
+  locale: string;
 }
 
 // Secció CTA final: crida a l'acció principal abans del footer
@@ -18,6 +19,7 @@ export default function CtaFinal({
   primary,
   secondary,
   microcopy,
+  locale,
 }: CtaFinalProps) {
   return (
     <section id="uneix-te" className="px-8 py-20 bg-us-dark text-center scroll-mt-20">
@@ -35,8 +37,7 @@ export default function CtaFinal({
       <AnimacioEntrada retard={150}>
       <div className="flex gap-3 justify-center flex-wrap">
         <Link
-          href="https://lnkd.in/eGJrXYYZ"
-          target="_blank"
+          href={`/${locale}/uneix-te`}
           rel="noopener noreferrer"
           className="bg-us-cream text-us-dark text-[14px] font-bold px-8 py-3 rounded-full hover:opacity-85 transition-opacity"
         >

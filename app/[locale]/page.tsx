@@ -116,6 +116,7 @@ export default async function Home({ params }: HomePageProps) {
         primary={t("cta.primary")}
         secondary={t("cta.secondary")}
         microcopy={t("cta.microcopy")}
+        locale={locale}
       />
     </main>
   );

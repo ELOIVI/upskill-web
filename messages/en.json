@@ -112,5 +112,26 @@
     "ca": "CA",
     "es": "ES",
     "en": "EN"
-  }
+  },
+  "form": {
+  "title": "Join UpSkill",
+  "subtitle": "Fill in the form and we'll keep you updated on upcoming sessions.",
+  "nom": "What's your name?",
+  "grau": "What degree are you studying?",
+  "curs": "What year are you in?",
+  "assistencia": "Do you plan to attend the next session?",
+  "assistencia_si": "Yes",
+  "assistencia_potser": "No, but I'd like to attend a future session",
+  "assistencia_no": "No",
+  "comoHaTrobat": "How did you find UpSkill?",
+  "trobat_amics": "Friends / Classmates",
+  "trobat_instagram": "Instagram",
+  "trobat_linkedin": "LinkedIn",
+  "trobat_posters": "Posters at university",
+  "motivacio": "Why are you interested in joining UpSkill?",
+  "contacte": "Leave us your contact (Instagram / LinkedIn)",
+  "enviar": "Submit",
+  "exit": "Thank you! We'll be in touch soon.",
+  "error": "Something went wrong. Please try again."
+}
 }
