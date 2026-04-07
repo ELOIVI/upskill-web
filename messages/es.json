@@ -99,7 +99,7 @@
   "notFound": {
     "error": "Error 404",
     "title": "Esta página no existe",
-    "description": "Quizás escribiste mal la URL o la página se movió. Vuelve al inicio y sigue explorando.",
+    "description": "Quizás escribiste mal la URL o la página se ha movido. Vuelve al inicio y sigue explorando.",
     "home": "Volver al inicio",
     "events": "Ver eventos"
   },

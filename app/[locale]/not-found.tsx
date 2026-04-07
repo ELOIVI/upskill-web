@@ -1,9 +1,22 @@
-import { notFound } from "next/navigation";
 import Link from "next/link";
+import { headers } from "next/headers";
+
+import { getTranslationsSync, getNestedValue } from "@/lib/translations";
+
 
 // Pàgina 404: es mostra quan l'usuari visita una ruta que no existeix
 // Nota: next-intl automàticament està dins del layout de [locale]
-export default function NotFound() {
+export default async function NotFound() {
+  // Detecta el locale de la URL actual via headers
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || headersList.get("referer") || "";
+
+  // Detecta el locale de la pathname
+  const locale = (["es", "en"] as const).find((l) => pathname.includes(`/${l}`)) || "ca";
+
+  const i18n = getTranslationsSync(locale);
+  const t = (key: string) => getNestedValue(i18n, key) || key;
+
   return (
     <main className="min-h-screen bg-us-cream flex flex-col items-center justify-center px-8 text-center">
 
@@ -20,15 +33,15 @@ export default function NotFound() {
 
       {/* Codi d'error */}
       <p className="text-[11px] font-semibold tracking-widest uppercase text-us-dark opacity-35 mb-4">
-        Error 404
+        {t("notFound.error")}
       </p>
 
       {/* Missatge principal */}
       <h1 className="text-[56px] font-extrabold tracking-tight text-us-dark leading-tight mb-4">
-        Aquesta pàgina<br />no existeix
+        {t("notFound.title")}
       </h1>
       <p className="text-[16px] text-us-dark opacity-55 max-w-md leading-relaxed mb-10">
-        Potser has escrit malament la URL o la pàgina s'ha mogut. Torna a l'inici i continua explorant.
+        {t("notFound.description")}
       </p>
 
       {/* Botons */}
@@ -37,13 +50,13 @@ export default function NotFound() {
           href="/"
           className="bg-us-dark text-us-cream text-[14px] font-semibold px-8 py-3 rounded-full hover:opacity-80 transition-opacity"
         >
-          Tornar a l'inici
+          {t("notFound.home")}
         </Link>
         <Link
           href="/#esdeveniments"
           className="border-[1.5px] border-us-dark text-us-dark text-[14px] font-semibold px-8 py-3 rounded-full hover:bg-us-dark hover:text-us-cream transition-colors"
         >
-          Veure esdeveniments
+          {t("notFound.events")}
         </Link>
       </div>
 
