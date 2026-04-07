@@ -33,7 +33,7 @@ export const membres: Membre[] = [
       en: "President",
     },
     slug: "lucia-guerrero",
-    foto: "/images/team/lucia_foto.webp",
+    foto: "/images/team/lucia_foto_fondo.webp",
     estudis: "Psicologia",
     universitat: "Universitat Rovira i Virgili",
     bio: {
@@ -51,7 +51,7 @@ export const membres: Membre[] = [
       en: "Ops Lead",
     },
     slug: "grecia-martinez",
-    foto: "/images/team/grecia_foto.webp",
+    foto: "/images/team/grecia_foto_fondo.webp",
     estudis: "Psicologia",
     universitat: "Universitat Rovira i Virgili",
     bio: {
@@ -70,7 +70,7 @@ export const membres: Membre[] = [
       en: "Tech Lead",
     },
     slug: "eloi-viciana",
-    foto: "/images/team/eloi_foto.webp",
+    foto: "/images/team/eloi_foto_fondo.webp",
     estudis: "Enginyeria Informàtica",
     universitat: "Universitat Rovira i Virgili",
     bio: {
