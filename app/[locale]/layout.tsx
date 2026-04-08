@@ -118,7 +118,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         date={t("banner.date")}
         location={t("banner.location")}
         cta={t("banner.cta")}
-        ctaUrl="https://lnkd.in/eGJrXYYZ"
+        ctaUrl={`/${locale}/sessio`}
       />
       <Navbar links={navLinks} ctaLabel={t("navbar.cta")} locale={locale} />
       {children}

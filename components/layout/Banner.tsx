@@ -26,8 +26,6 @@ export default function Banner({ session, date, location, cta, ctaUrl }: BannerP
       {/* Enllaç d'inscripció, en mòbil alineat a l'esquerra, en escriptori a la dreta */}
       <Link
         href={ctaUrl}
-        target="_blank"
-        rel="noopener noreferrer"
         className="sm:ml-auto text-us-dark text-[13px] font-bold underline hover:opacity-70 transition-opacity"
       >
         {cta} →

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import AnimacioEntrada from "@/components/ui/AnimacioEntrada";
+import { esdeveniments as dadesEsdeveniments } from "@/lib/esdeveniments";
+
 
 interface EventimentiProps {
   label: string;
@@ -17,30 +19,19 @@ interface EventimentiProps {
 // Secció "Esdeveniments": calendari de sessions i activitats
 // Afegir nous esdevenimentsarr a l'array per actualitzar la secció
 export default function Esdeveniments({ label, title, description, upcoming, past, register, closed, locale  }: EventimentiProps) {
-  const esdeveniments = [
-    {
-      data: "18 mar",
-      dia: "Dimecres",
-      hora: "17:00 – 19:00",
-      titol: "Primera sessió UpSkill",
-      descripcio: "LinkedIn, networking i com moure't al món professional sent estudiant.",
-      lloc: "Aula 418 · Campus Catalunya · URV",
-      inscripcio: "https://docs.google.com/forms/d/e/1FAIpQLSeQEjyt27Ao8fuZPbd48ZDIXhZ0QcInh4-h34YAFiXmSSYIxg/viewform",
-      actiu: false,
-      passat: true,
-    },
-    {
-      data: "8 abr",
-      dia: "Dimecres",
-      hora: "15:30 – 17:00",
-      titol: "Marca personal i LinkedIn",
-      descripcio: "Com construir la teva marca personal com a estudiant, com i què publicar, i com posicionar-te. Vine amb el perfil de LinkedIn creat!",
-      lloc: "Aula 418 · Campus Catalunya · URV",
-      inscripcio: `/${locale}/sessio`,
-      actiu: true,
-      passat: false,
-    },
-  ];
+  
+  const tipus = locale as "ca" | "es" | "en";
+
+  const esdeveniments = dadesEsdeveniments.map((e) => ({
+    ...e,
+    data: e.data[tipus],
+    dia: e.dia[tipus],
+    titol: e.titol[tipus],
+    descripcio: e.descripcio[tipus],
+    lloc: e.lloc[tipus],
+    // Substitueix SESSIO_URL pel link real amb locale
+    inscripcio: e.inscripcio === "SESSIO_URL" ? `/${locale}/sessio` : e.inscripcio,
+  }));
 
   return (
     <section id="esdeveniments" className="px-8 py-16 border-t-[1.5px] border-us-dark bg-us-cream scroll-mt-20">
