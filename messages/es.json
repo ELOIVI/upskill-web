@@ -133,5 +133,24 @@
   "enviar": "Enviar inscripción",
   "exit": "¡Gracias! Nos pondremos en contacto pronto.",
   "error": "Ha habido un error. Inténtalo de nuevo."
+},
+"formSessio": {
+  "title": "Ven a una sesión",
+  "subtitle": "Sin compromiso. Prueba UpSkill y mira si es para ti.",
+  "nom": "¿Cómo te llamas?",
+  "grau": "¿De qué grado vienes?",
+  "curs": "¿En qué curso estás?",
+  "assistencia": "¿Confirmas que vendrás?",
+  "assistencia_si": "Sí, estaré allí",
+  "assistencia_potser": "Quizás, aún no lo sé",
+  "assistencia_no": "No puedo venir",
+  "membre": "¿Te interesaría ser miembro de UpSkill?",
+  "membre_si": "Sí, me interesa formar parte del proyecto",
+  "membre_potser": "Quizás, me gustaría saber más",
+  "membre_no": "De momento no",
+  "contacte": "Déjanos tu contacto (Instagram / LinkedIn)",
+  "enviar": "Confirmar asistencia",
+  "exit": "¡Perfecto! Te esperamos en la sesión.",
+  "error": "Ha habido un error. Inténtalo de nuevo."
 }
 }

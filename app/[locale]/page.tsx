@@ -109,6 +109,8 @@ export default async function Home({ params }: HomePageProps) {
         past={t("events.past")}
         register={t("events.register")}
         closed={t("events.closed")}
+        locale={locale}
+
       />
       <CtaFinal
         title={t("cta.title")}

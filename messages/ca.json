@@ -133,5 +133,24 @@
   "enviar": "Enviar inscripció",
   "exit": "Gràcies! Ens posarem en contacte aviat.",
   "error": "Hi ha hagut un error. Torna-ho a intentar."
+},
+"formSessio": {
+  "title": "Vine a una sessió",
+  "subtitle": "Sense compromís. Prova UpSkill i veu si és per a tu.",
+  "nom": "Com et dius?",
+  "grau": "De quin grau vens?",
+  "curs": "En quin curs estàs?",
+  "assistencia": "Confirmes que vindràs?",
+  "assistencia_si": "Sí, hi seré",
+  "assistencia_potser": "Potser, no ho sé encara",
+  "assistencia_no": "No puc venir",
+  "membre": "T'interessaria fer-te membre d'UpSkill?",
+  "membre_si": "Sí, m'interessa formar part del projecte",
+  "membre_potser": "Potser, m'agradaria saber-ne més",
+  "membre_no": "De moment no",
+  "contacte": "Deixa'ns el teu contacte (Instagram / LinkedIn)",
+  "enviar": "Confirmar assistència",
+  "exit": "Perfecte! T'esperem a la sessió.",
+  "error": "Hi ha hagut un error. Torna-ho a intentar."
 }
 }

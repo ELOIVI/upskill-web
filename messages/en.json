@@ -11,7 +11,7 @@
   "banner": {
     "session": "Next session",
     "date": "April 8th, 3:30 PM",
-    "location": "Room 418 · Campus Catalunya · URV",
+    "location": "Class 418 · Campus Catalunya · URV",
     "cta": "Register here"
   },
   "hero": {
@@ -132,6 +132,25 @@
   "contacte": "Leave us your contact (Instagram / LinkedIn)",
   "enviar": "Submit",
   "exit": "Thank you! We'll be in touch soon.",
+  "error": "Something went wrong. Please try again."
+},
+"formSessio": {
+  "title": "Come to a session",
+  "subtitle": "No commitment. Try UpSkill and see if it's for you.",
+  "nom": "What's your name?",
+  "grau": "What degree are you studying?",
+  "curs": "What year are you in?",
+  "assistencia": "Will you confirm you're coming?",
+  "assistencia_si": "Yes, I'll be there",
+  "assistencia_potser": "Maybe, I'm not sure yet",
+  "assistencia_no": "I can't come",
+  "membre": "Would you be interested in becoming an UpSkill member?",
+  "membre_si": "Yes, I'm interested in being part of the project",
+  "membre_potser": "Maybe, I'd like to know more",
+  "membre_no": "Not for now",
+  "contacte": "Leave us your contact (Instagram / LinkedIn)",
+  "enviar": "Confirm attendance",
+  "exit": "Perfect! We're waiting for you at the session.",
   "error": "Something went wrong. Please try again."
 }
 }

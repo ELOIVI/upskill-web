@@ -11,11 +11,12 @@ interface EventimentiProps {
   past: string;
   register: string;
   closed: string;
+  locale: string;
 }
 
 // Secció "Esdeveniments": calendari de sessions i activitats
 // Afegir nous esdevenimentsarr a l'array per actualitzar la secció
-export default function Esdeveniments({ label, title, description, upcoming, past, register, closed }: EventimentiProps) {
+export default function Esdeveniments({ label, title, description, upcoming, past, register, closed, locale  }: EventimentiProps) {
   const esdeveniments = [
     {
       data: "18 mar",
@@ -35,7 +36,7 @@ export default function Esdeveniments({ label, title, description, upcoming, pas
       titol: "Marca personal i LinkedIn",
       descripcio: "Com construir la teva marca personal com a estudiant, com i què publicar, i com posicionar-te. Vine amb el perfil de LinkedIn creat!",
       lloc: "Aula 418 · Campus Catalunya · URV",
-      inscripcio: "https://lnkd.in/eGJrXYYZ",
+      inscripcio: `/${locale}/sessio`,
       actiu: true,
       passat: false,
     },
@@ -101,8 +102,7 @@ export default function Esdeveniments({ label, title, description, upcoming, pas
                 {e.inscripcio && !e.passat && (
                   <Link
                     href={e.inscripcio}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    
                     className="self-start mt-3 bg-us-dark text-us-cream text-[12px] font-semibold px-5 py-2 rounded-full hover:opacity-80 transition-opacity"
                   >
                     {register} →
