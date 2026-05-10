@@ -18,19 +18,19 @@
     "pill": "Students' Career LAB · URV",
     "title": "Estudiantes que quieren",
     "titleHighlight": "más",
-    "subtitle": "La comunidad que impulsa tu carrera profesional desde la universidad. Networking, LinkedIn, prácticas y mucho más.",
+    "subtitle": "Una comunidad de estudiantes de la URV para explorar tu futuro profesional mientras sigues en la universidad. Networking, LinkedIn, prácticas y más.",
     "ctaPrimary": "Únete a UpSkill",
     "ctaSecondary": "Saber más"
   },
   "whyUs": {
     "label": "Quiénes somos",
-    "title": "Nacimos para complementar lo que la universidad nos ofrece",
-    "description": "UpSkill es una asociación de estudiantes de la URV creada por y para estudiantes con iniciativa. Un espacio para compartir experiencias, recursos y oportunidades, y construir comunidad.",
+    "title": "Un espacio que complementa lo que la universidad nos ofrece",
+    "description": "UpSkill es un grupo de estudiantes de la URV creado por y para estudiantes con iniciativa. Un espacio para compartir experiencias, recursos y oportunidades, y construir comunidad.",
     "questions": [
-      "¿Cómo usar LinkedIn siendo todavía estudiante?",
-      "¿Cómo romper la barrera entre universidad y empresa antes de graduarte?",
-      "¿Cómo hacer networking sin que sea incómodo?",
-      "¿Cómo encontrar prácticas que realmente te aporten?"
+      "¿Cómo puedes usar LinkedIn siendo todavía estudiante?",
+      "¿Cómo puedes empezar a conectar la universidad con el mundo profesional antes de graduarte?",
+      "¿Cómo puedes hacer networking sin que sea incómodo?",
+      "¿Cómo puedes encontrar prácticas u oportunidades que realmente te aporten?"
     ],
     "stats": {
       "university": "Universidad",
@@ -43,31 +43,31 @@
   },
   "whatWeDo": {
     "label": "Qué hacemos",
-    "title": "Todo lo que necesitas para destacar",
-    "description": "Formación práctica para estudiantes de todos los grados de la URV que quieren dar el salto al mundo profesional con ventaja.",
+    "title": "Sesiones prácticas para estudiantes que quieren hacer algo más",
+    "description": "Sesiones prácticas para estudiantes de todos los grados de la URV que quieren hacer algo más que estudiar y empezar a moverse antes de graduarse.",
     "services": {
       "linkedin": {
         "title": "LinkedIn & Portfolio",
-        "description": "Construye una presencia profesional que abra puertas antes de graduarte."
+        "description": "Trabaja tu presencia profesional y empieza a comunicar tu valor antes de graduarte."
       },
       "networking": {
         "title": "Networking real",
-        "description": "Conecta con profesionales y estudiantes que comparten tus ambiciones."
+        "description": "Conecta con estudiantes de diferentes grados y comparte experiencias, ideas y oportunidades."
       },
       "careers": {
-        "title": "Salidas laborales",
-        "description": "Conoce el mercado laboral real y decide tu camino con información de primera mano."
+        "title": "Mercado laboral junior",
+        "description": "Compartimos perspectivas y experiencias sobre el mercado laboral para perfiles junior."
       },
       "speaking": {
-        "title": "Hablar en público",
-        "description": "Pierde el miedo a comunicar y aprende a defender tus ideas con confianza."
+        "title": "Comunica tu perfil",
+        "description": "Practica cómo comunicar tu experiencia, tus ideas y tu marca personal de forma más clara."
       }
     }
   },
   "team": {
     "label": "El equipo",
     "title": "Las personas detrás",
-    "description": "Estudiantes como tú, con ganas de hacer las cosas de otra manera.",
+    "description": "Estudiantes como tú, con ganas de construir algo dentro de la universidad.",
     "viewProfile": "Ver perfil →",
     "memberLabel": "Miembro del equipo",
     "studies": "Estudios",

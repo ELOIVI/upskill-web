@@ -44,7 +44,7 @@
   "whatWeDo": {
     "label": "Què fem",
     "title": "Tot el que necessites per destacar",
-    "description": "Formació pràctica per a estudiants de tots els graus de la URV que volen fer el salt al món professional amb avantatge.",
+    "description": "Sessions pràctiques per a estudiants de tots els graus de la URV que volen fer alguna cosa més que estudiar i començar a moure's abans de graduar-se.",
     "services": {
       "linkedin": {
         "title": "LinkedIn & Portfolio",
@@ -55,19 +55,19 @@
         "description": "Connecta amb professionals i estudiants que comparteixen les teves ambicions."
       },
       "careers": {
-        "title": "Sortides laborals",
-        "description": "Coneix el mercat laboral real i decideix el teu camí amb informació de primera mà."
+        "title": "Mercat laboral junior",
+        "description": "Compartim perspectives i experiències sobre el mercat laboral per a perfils junior."
       },
       "speaking": {
-        "title": "Parlar en públic",
-        "description": "Perd la por a comunicar i aprèn a defensar les teves idees amb confiança."
+        "title": "Comunica el teu perfil",
+        "description": "Practica com comunicar la teva experiència, les teves idees i la teva marca personal de forma més clara."
       }
     }
   },
   "team": {
     "label": "L'equip",
     "title": "Les persones del darrere",
-    "description": "Estudiants com tu, amb ganes de fer les coses d'una altra manera.",
+    "description": "Estudiants com tu, amb ganes de construir alguna cosa dins de la universitat.",
     "viewProfile": "Veure perfil →",
     "memberLabel": "Membre de l'equip",
     "studies": "Estudis",
